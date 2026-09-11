@@ -1,0 +1,146 @@
+{
+  "bars": {
+    "bar_count": 105,
+    "first_date": "2024-08-22",
+    "last_date": "2026-08-20",
+    "palette": [
+      [
+        96.0,
+        115.0,
+        254.0
+      ],
+      [
+        255.0,
+        95.0,
+        53.0
+      ],
+      [
+        2.0,
+        181.0,
+        146.0
+      ],
+      [
+        175.0,
+        113.0,
+        253.0
+      ],
+      [
+        255.0,
+        165.0,
+        79.0
+      ],
+      [
+        5.0,
+        195.0,
+        248.0
+      ],
+      [
+        255.0,
+        118.0,
+        148.0
+      ]
+    ],
+    "index_per_pixel": 2.944717415035746,
+    "median_abs_relative_to_existing": 0.02571583272078759,
+    "max_endpoint_pixel_adjustment": 2.436436869236785,
+    "calendar": "105 weekly bars; last 2026-08-20; Aug 21 2025 is bar 52; x=141.5..813.5"
+  },
+  "distribution": {
+    "raw_heights": [
+      [
+        91.0,
+        145.0,
+        98.0,
+        73.0,
+        21.0,
+        0.0
+      ],
+      [
+        37.0,
+        68.0,
+        156.0,
+        127.0,
+        33.0,
+        9.0
+      ]
+    ],
+    "raw_shares": [
+      [
+        0.21261682242990654,
+        0.338785046728972,
+        0.22897196261682243,
+        0.1705607476635514,
+        0.04906542056074766,
+        0.0
+      ],
+      [
+        0.08604651162790698,
+        0.15813953488372093,
+        0.3627906976744186,
+        0.29534883720930233,
+        0.07674418604651163,
+        0.020930232558139535
+      ]
+    ],
+    "implied_total_multiplier": 1.5519376175486774,
+    "max_share_adjustment_pp": 0.3159417244039826,
+    "interpretation": "count-growth reading, not percentage-point changes; inferred common total is not a printed official number"
+  },
+  "sources": {
+    "palette": [
+      [
+        231.0,
+        100.0,
+        88.0
+      ],
+      [
+        254.0,
+        166.0,
+        165.0
+      ],
+      [
+        29.0,
+        68.0,
+        107.0
+      ],
+      [
+        180.0,
+        218.0,
+        241.0
+      ],
+      [
+        197.0,
+        197.0,
+        197.0
+      ]
+    ],
+    "index_per_pixel": 3.01312534105573,
+    "records": 265,
+    "unresolved": 87,
+    "baseline_y": 714
+  },
+  "source_images": {
+    "boss_production_by_tier.png": {
+      "sha256": "73cdbfd94d31c98c6d6847ca703d47806042a2145bd598cb5043056bffdcc2e1",
+      "dimensions": [
+        1767,
+        1005
+      ]
+    },
+    "production_by_source.png": {
+      "sha256": "c6f9f8c258f4fb2137e8572eac00beab9ebc1030859918e08998c46d5374bf9b",
+      "dimensions": [
+        1755,
+        991
+      ]
+    },
+    "solo_clear_distribution.png": {
+      "sha256": "3df645e68e6670f91085e29fd64d14a0922916abbb16ffa9165e022f95921985",
+      "dimensions": [
+        1767,
+        987
+      ]
+    }
+  },
+  "note": "Image reconstructions are measurements, while printed ratios are transcribed. Both versions retained."
+}

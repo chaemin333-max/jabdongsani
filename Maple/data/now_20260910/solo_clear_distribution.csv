@@ -1,0 +1,7 @@
+tier,label,reference_date,comparison_date,raw_share_reference,raw_share_comparison,official_change_pct,official_multiplier,constrained_share_reference,constrained_share_comparison,implied_population_growth_multiplier,interpretation
+1,하드 스우 미만,2026-02-12,2026-08-20,0.21261682242990654,0.08604651162790698,-37,0.63,0.21210852060492597,0.08610421351353836,1.5519376175486774,growth of tier counts; common total inferred from distribution bars
+2,하드 스우 ~ 하드 진 힐라,2026-02-12,2026-08-20,0.338785046728972,0.15813953488372093,-27,0.73,0.3379117905800621,0.15894685735698277,1.5519376175486774,growth of tier counts; common total inferred from distribution bars
+3,노멀 세렌 ~ 하드 세렌,2026-02-12,2026-08-20,0.22897196261682243,0.3627906976744186,144,2.44,0.23005279460592212,0.361695478279006,1.5519376175486774,growth of tier counts; common total inferred from distribution bars
+4,이지 카링 ~ 익스트림 스우,2026-02-12,2026-08-20,0.1705607476635514,0.29534883720930233,171,2.71,0.16932499710192772,0.2956760226425992,1.5519376175486774,growth of tier counts; common total inferred from distribution bars
+5,노멀 흉성 ~ 노멀 림보,2026-02-12,2026-08-20,0.04906542056074766,0.07674418604651163,153,2.53,0.04744247986312214,0.07734168738256916,1.5519376175486774,growth of tier counts; common total inferred from distribution bars
+6,익스트림 세렌 이상,2026-02-12,2026-08-20,0.0,0.020930232558139535,894,9.94,0.003159417244039826,0.02023574082530469,1.5519376175486774,growth of tier counts; common total inferred from distribution bars
