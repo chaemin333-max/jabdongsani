@@ -1,0 +1,153 @@
+{
+  "cutoff": "2026-08-21",
+  "last_observation": "2026-08-20",
+  "season_boss_assignment": {
+    "Kai": 3,
+    "Meirin": 3
+  },
+  "no_added_season_boss_mass": true,
+  "scenarios": [
+    {
+      "name": "primary",
+      "transfer_fraction": 0.5,
+      "transferred_productivity": 0.8,
+      "main_tolerance": 0.15,
+      "final_upper_elasticity": 0.0,
+      "high_control_weight": 0.0,
+      "growth_regularizer": 0.35,
+      "include_progression": true,
+      "population_provider": "meaegi",
+      "solo_upper_control": false
+    },
+    {
+      "name": "no_transfers",
+      "transfer_fraction": 0,
+      "transferred_productivity": 0.8,
+      "main_tolerance": 0.15,
+      "final_upper_elasticity": 0.0,
+      "high_control_weight": 0.0,
+      "growth_regularizer": 0.35,
+      "include_progression": true,
+      "population_provider": "meaegi",
+      "solo_upper_control": false
+    },
+    {
+      "name": "all_declines_transfer",
+      "transfer_fraction": 1,
+      "transferred_productivity": 0.8,
+      "main_tolerance": 0.15,
+      "final_upper_elasticity": 0.0,
+      "high_control_weight": 0.0,
+      "growth_regularizer": 0.35,
+      "include_progression": true,
+      "population_provider": "meaegi",
+      "solo_upper_control": false
+    },
+    {
+      "name": "all_declines_full_productivity",
+      "transfer_fraction": 1,
+      "transferred_productivity": 1,
+      "main_tolerance": 0.15,
+      "final_upper_elasticity": 0.0,
+      "high_control_weight": 0.0,
+      "growth_regularizer": 0.35,
+      "include_progression": true,
+      "population_provider": "meaegi",
+      "solo_upper_control": false
+    },
+    {
+      "name": "full_productivity_retained",
+      "transfer_fraction": 0.5,
+      "transferred_productivity": 1,
+      "main_tolerance": 0.15,
+      "final_upper_elasticity": 0.0,
+      "high_control_weight": 0.0,
+      "growth_regularizer": 0.35,
+      "include_progression": true,
+      "population_provider": "meaegi",
+      "solo_upper_control": false
+    },
+    {
+      "name": "main_upper_positive",
+      "transfer_fraction": 0.5,
+      "transferred_productivity": 0.8,
+      "main_tolerance": 0.15,
+      "final_upper_elasticity": 0.2,
+      "high_control_weight": 0.5,
+      "growth_regularizer": 0.35,
+      "include_progression": true,
+      "population_provider": "meaegi",
+      "solo_upper_control": false
+    },
+    {
+      "name": "main_upper_negative",
+      "transfer_fraction": 0.5,
+      "transferred_productivity": 0.8,
+      "main_tolerance": 0.15,
+      "final_upper_elasticity": -0.2,
+      "high_control_weight": 0.5,
+      "growth_regularizer": 0.35,
+      "include_progression": true,
+      "population_provider": "meaegi",
+      "solo_upper_control": false
+    },
+    {
+      "name": "solo_upper_control",
+      "transfer_fraction": 0.5,
+      "transferred_productivity": 0.8,
+      "main_tolerance": 0.15,
+      "final_upper_elasticity": 0.2,
+      "high_control_weight": 0.0,
+      "growth_regularizer": 0.35,
+      "include_progression": true,
+      "population_provider": "meaegi",
+      "solo_upper_control": true
+    },
+    {
+      "name": "chuchu_population",
+      "transfer_fraction": 0.5,
+      "transferred_productivity": 0.8,
+      "main_tolerance": 0.15,
+      "final_upper_elasticity": 0.0,
+      "high_control_weight": 0.0,
+      "growth_regularizer": 0.35,
+      "include_progression": true,
+      "population_provider": "chuchu",
+      "solo_upper_control": false
+    },
+    {
+      "name": "without_progression",
+      "transfer_fraction": 0.5,
+      "transferred_productivity": 0.8,
+      "main_tolerance": 0.15,
+      "final_upper_elasticity": 0.0,
+      "high_control_weight": 0.0,
+      "growth_regularizer": 0.35,
+      "include_progression": false,
+      "population_provider": "meaegi",
+      "solo_upper_control": false
+    },
+    {
+      "name": "weaker_main_bridge",
+      "transfer_fraction": 0.5,
+      "transferred_productivity": 0.8,
+      "main_tolerance": 0.3,
+      "final_upper_elasticity": 0.0,
+      "high_control_weight": 0.0,
+      "growth_regularizer": 0.35,
+      "include_progression": true,
+      "population_provider": "meaegi",
+      "solo_upper_control": false
+    }
+  ],
+  "inputs": {
+    "Maple\\data\\now_20260910\\boss_tier_weekly.csv": "b6ee336d45bf3f7843dfb7a69747527e238e68e58c90611edeb66908f7c163fa",
+    "Maple\\data\\now_20260910\\season_identification_windows.csv": "2fbd441fb39c98c54076310b5b8edc6fe1355aef28defc20e126b2ef98738b7d",
+    "Maple\\data\\now_20260910\\solo_clear_distribution.csv": "ea1dad61069f1aa7d2313952c08649e7d5b7782de95da8ce9023b367b955331c",
+    "Maple\\data\\boss_decomposition_research_20260912\\challenger_progression_canonical_s2_s3.csv": "c53c7a1a28fcbf79287f2d16aa5e71683124732cb4945415fe342177a2414214",
+    "Maple\\data\\challengers_population_weekly_seasons1_4.csv": "0a06d3b769e1b1671da7f1f23383439bf273555a85a11f5d65eb48edc8e90cf6",
+    "Maple\\data\\maple_production_calibration_inputs_weekly.csv": "cc1591aa3d27dbde473249757d4cf577ea056edce15fac9add14b6bb21f03e83",
+    "Maple\\data\\boss_decomposition_research_20260912\\chuchu_population_initial_data.json": "5f188e837e2749bd42117b52c9cd21b0a4a70fd3ef554a4a1935daa0cf09967a"
+  },
+  "scope": "User-assumption-conditional tier decomposition; scenario envelopes are not confidence intervals"
+}
