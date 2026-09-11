@@ -2,7 +2,18 @@
 
 메이플스토리 경제 지표 복원/분석용 데이터 폴더입니다.
 
-## 현재 최우선 작업 — 여기서 시작
+## 현재 상태 — V2 calibration
+
+현재 per-capita 생산량 calibration의 최신 산출물은 다음입니다.
+
+- `data/per_capita_production_v2_weekly.csv` — V2 전체 주간 시계열.
+- `docs/PER_CAPITA_PRODUCTION_V2.md` — V2 counterfactual, boundary 처리, progression 재검증, V1↔V2 sensitivity.
+
+V1 산출물 `data/per_capita_production_final_weekly.csv`와 `docs/PER_CAPITA_PRODUCTION_METHOD.md`는 **역사적 first-pass artifact로 보존**합니다. 저장된 V1 CSV에는 일부 Challenger 주의 residual 산술 불일치가 확인되었으므로 새 분석의 기준으로 사용하지 마세요. 상세 erratum은 V2 문서를 따릅니다. 문서에 적힌 V1 모델을 정확히 재계산하면 Season 3의 V1 최대 `w`는 2026-02-26의 약 `0.74444`이며, 역사적 CSV에서 보이는 `0.797`은 올바른 V1 모델 출력이 아닙니다.
+
+V2의 핵심 수정은 챌린저스 운영 중인 mixed `B/A`에서 within-season patch multiplier를 추출해 본섭 counterfactual에 다시 넣던 identification contamination을 제거한 것입니다. 결정석 가격을 직접 바꾼 2025-04-17과 2025-10-23만 외생 reward-table factor를 사용하고, Season 3 아즈모스 삭제 및 Season 4 OVERDRIVE 2·3에는 endogenous multiplier를 사용하지 않습니다.
+
+## 현재 최우선 목표
 
 현재 목표는 챌린저스 경제모형 자체를 연구하는 것이 아니라, 다음 최종 시계열을 만드는 것입니다.
 
@@ -12,23 +23,32 @@ Q_t=\frac{P_t}{E_t},\qquad E_t=A_t+w_tC_t
 
 즉 이미 복원된 총 메소 생산량에서 생산능력으로 보정된 population exposure를 제거하여 **본섭-equivalent 유효 생산계정당 메소 생산량**을 구합니다.
 
-다음 연구자는 먼저 아래 두 파일을 읽으세요.
+처음 합류한 연구자는 다음 순서로 읽으세요.
 
 1. `docs/HANDOFF_PER_CAPITA_2026-09-11.md` — 목표, 고정 가정, 데이터 정의, 금지사항.
-2. `docs/NEXT_TASK_PER_CAPITA_PRODUCTION.md` — 정확한 실행 순서와 필수 산출물.
+2. `docs/NEXT_TASK_PER_CAPITA_PRODUCTION.md` — 최초 first-pass의 실행 순서.
+3. `docs/PER_CAPITA_PRODUCTION_V2.md` — 현재 최신 calibration과 validation 결과.
 
-실제 계산은 `data/maple_production_calibration_inputs_weekly.csv`에서 바로 시작합니다. 이 파일에는 공통 목요일 날짜축으로 정렬된 총생산 `P_t`, 보스생산 `B_t`, 본섭 계정수 `A_t`, 챌린저스 계정수 `C_t`가 이미 들어 있습니다.
+실제 원 입력은 `data/maple_production_calibration_inputs_weekly.csv`입니다. 이 파일에는 공통 목요일 날짜축으로 정렬된 총생산 `P_t`, 보스생산 `B_t`, 본섭 계정수 `A_t`, 챌린저스 계정수 `C_t`가 이미 들어 있습니다.
 
-**NOW 그래프를 다시 픽셀 복원하거나, 메애기 인구를 다시 수집하거나, 먼저 인벤을 뒤지는 작업은 하지 마세요.** Aggregate progression 검색은 첫 번째 `Q_t` 시계열을 만든 뒤 residual 결과를 검증하는 2차 단계입니다.
+**NOW 그래프를 다시 픽셀 복원하거나, 메애기 인구를 다시 수집하지 마세요.** Aggregate progression 자료는 counterfactual을 fit하는 입력이 아니라 residual 결과를 독립적으로 검증하는 validation layer입니다. 개인 후기·가이드·개인 인증을 population distribution 자료로 사용하지 않습니다.
 
 패치 날짜 및 총생산 정본의 6개 기준점은 `docs/meso_patch_dates_and_values.md`를 사용합니다.
 
 ## 현재 포함된 데이터
 
 - `data/maple_production_calibration_inputs_weekly.csv`
-  - 현재 per-capita 생산량 연구의 1차 입력패널.
+  - per-capita 생산량 연구의 1차 입력패널.
   - 목요일 공통 날짜축.
   - `P_t`, `B_t`, `A_t`, `C_t`, 챌린저스 시즌, boss direct/backcast source flag 포함.
+
+- `data/per_capita_production_v2_weekly.csv`
+  - 현재 최신 V2 시계열.
+  - `muM_counterfactual`, unconstrained `muC_raw`/`w_raw`, boundary failure flag, canonical `w`, plotting-only `w_plot`, `E`, `Q`, September-2025=100 index 포함.
+  - identification failure 주에는 canonical `w`, `E`, `Q`를 NA로 두고, 연속 그래프용 값은 별도의 `w_plot`/`Q_raw_plot` 컬럼에만 둡니다.
+
+- `data/per_capita_production_final_weekly.csv`
+  - V1 historical artifact. 일부 Challenger residual 산술 불일치가 있으므로 최신 분석에 직접 사용하지 않습니다.
 
 - `data/meaegi_population_weekly.csv`
   - 메애기 인구수 통계 RSC payload에서 직접 파싱.
