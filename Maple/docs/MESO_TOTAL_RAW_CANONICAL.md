@@ -1,5 +1,7 @@
 # 총 메소 생산량 원시 복원 정본
 
+2026-09-12 복구 확인: part00에서 누락된 base64 문자 1개를 복구했고, 아래 기존 SHA-256과 정확히 일치하는 JSON을 `Maple/data/meso_total_production_raw_canonical.json`에 저장했다. 기존 복원 스크립트도 정상 실행된다. 복구 기록은 `Maple/data/boss_decomposition_research_20260912/raw_recovery_receipt.json`에 있다. 이 JSON에는 총생산 좌표 1,664개만 있으며 고해상도 보스 배열은 포함돼 있지 않다.
+
 총생산 원시 곡선 정본은 이미지 복원 단계에서 확정된 `total.month_coordinate` / `total.index` 배열이다.
 
 원본 JSON은 61,198 bytes이며 SHA-256은:

@@ -1,0 +1,25 @@
+{
+  "collected_on": "2026-09-12",
+  "analysis_cutoff": "2026-08-21",
+  "world_series_mapping": {
+    "population": "main_worlds",
+    "populationChallenger": "season2",
+    "populationChallenger2": "season3",
+    "populationChallenger3": "season4"
+  },
+  "source_url": "https://chuchu.gg/statistics/population",
+  "method": "parse public Next.js initialData; no personal records",
+  "html_sha256": "0a1ec2943915d011f497973b6132ea22806d6e93b0f5ea21cceb8de56435cdaf",
+  "files": {
+    "boss_input_through_20260821.csv": "333a8648a8d88bae9758c616466372f02c1b0aa113409a16b5e8c4372d9bcc78",
+    "challenger_progression_canonical_s2_s3.csv": "c53c7a1a28fcbf79287f2d16aa5e71683124732cb4945415fe342177a2414214",
+    "challenger_progression_observations.csv": "091b526f536ba58d433a86279c070d24c8f05f9383529e621f4dae216f3f19ba",
+    "chuchu_population_initial_data.json": "5f188e837e2749bd42117b52c9cd21b0a4a70fd3ef554a4a1935daa0cf09967a",
+    "chuchu_population_world_observations.csv": "ae49f0fbf3e6e824c310034cb9c6a714806dd7047747827a2ffef2722cca0a8d",
+    "population_provider_comparison.csv": "d80f037445a3bf5274298bd7009cd4c453c6ef0b41fb7a54c1ffdefcef1b5a79",
+    "raw_recovery_receipt.json": "46425e9580b407dbcadb62360a42eadf578cab75d09820fd3f36bba8b0596f5b",
+    "source_catalog.csv": "896a5edd6bbc5956cfba5dc617aeaadd65dcbdd44e520461427e5b32135afeb9",
+    "total_raw_coordinates.csv": "14fd2e1e15c85a1e6cfe98eded5bfa57bcb29c42b7c4c2d0bd5c4fae153de90f",
+    "total_raw_weekly_crosscheck.csv": "c8134310fbb71599c7a65d9463ef3df579cc1d94393268ece5fcf2aa2d131df3"
+  }
+}

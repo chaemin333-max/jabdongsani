@@ -1,0 +1,12 @@
+source_id,source_url,image_url,access_level,role,notes
+s2,https://www.inven.co.kr/board/maple/2304/46432,https://upload3.inven.co.kr/upload/2025/11/26/bbs/i1440207976.png,image_read,canonical,season2 Thursday and terminal Wednesday subset
+s3,https://www.inven.co.kr/board/maple/2304/47306,https://upload3.inven.co.kr/upload/2026/04/16/bbs/i1989100258.png,image_read,canonical,season3 Thursday and terminal Wednesday subset
+s4_0719,https://www.inven.co.kr/board/maple/5974/6905705,,article_read,candidate_text,25704; no verified screenshot
+s4_0725,https://www.inven.co.kr/board/maple/5974/6939414,,article_read,candidate_text,over40000; not exact
+s4_0811,https://www.inven.co.kr/board/maple/5974/7014203,,article_read,candidate_rank,100000 rank title; screenshot pending
+meaegi,https://meaegi.com/statistics/population,,provider_definition_read,existing_primary_population,weekly activity; population measurement definition
+chuchu,https://chuchu.gg/statistics/population,,html_initialData_parsed,secondary_population_panel,141 main weeks; 379 challenger daily records; 3490 world rows
+s4_rules,https://maplestory.nexon.com/news/update/805,,official_page_read,rules,item burning identity limit; tier gates; world groups and leap dates
+theqoo,https://theqoo.net/maplestory/3884984705?listStyle=viewer,,article_read,excluded,discussion of announcements; no numerical aggregate
+dc,https://gall.dcinside.com/mgallery/board/view/?id=lith&no=483820,,article_read,excluded,promotion; no aggregate
+fmkorea,https://m.fmkorea.com/index.php?cpage=2&document_srl=7798312882&mid=maple,,search_result,excluded,guide; not population distribution

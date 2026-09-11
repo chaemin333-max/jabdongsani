@@ -1,0 +1,45 @@
+date,season,statistic,value,quality,observation_relation,active_population_share,source_url,note
+2025-06-19,season2,challenger_rank_or_reported_cumulative_count,,canonical,canonical_reference,,https://www.inven.co.kr/board/maple/2304/46432,User-selected canonical source table
+2025-06-26,season2,challenger_rank_or_reported_cumulative_count,1,canonical,canonical_reference,,https://www.inven.co.kr/board/maple/2304/46432,User-selected canonical source table
+2025-07-03,season2,challenger_rank_or_reported_cumulative_count,8,canonical,canonical_reference,,https://www.inven.co.kr/board/maple/2304/46432,User-selected canonical source table
+2025-07-10,season2,challenger_rank_or_reported_cumulative_count,34,canonical,canonical_reference,,https://www.inven.co.kr/board/maple/2304/46432,User-selected canonical source table
+2025-07-17,season2,challenger_rank_or_reported_cumulative_count,130,canonical,canonical_reference,,https://www.inven.co.kr/board/maple/2304/46432,User-selected canonical source table
+2025-07-24,season2,challenger_rank_or_reported_cumulative_count,248,canonical,canonical_reference,,https://www.inven.co.kr/board/maple/2304/46432,User-selected canonical source table
+2025-07-31,season2,challenger_rank_or_reported_cumulative_count,470,canonical,canonical_reference,,https://www.inven.co.kr/board/maple/2304/46432,User-selected canonical source table
+2025-08-07,season2,challenger_rank_or_reported_cumulative_count,848,canonical,canonical_reference,,https://www.inven.co.kr/board/maple/2304/46432,User-selected canonical source table
+2025-08-14,season2,challenger_rank_or_reported_cumulative_count,1409,canonical,canonical_reference,,https://www.inven.co.kr/board/maple/2304/46432,User-selected canonical source table
+2025-08-21,season2,challenger_rank_or_reported_cumulative_count,2157,canonical,canonical_reference,,https://www.inven.co.kr/board/maple/2304/46432,User-selected canonical source table
+2025-08-28,season2,challenger_rank_or_reported_cumulative_count,4672,canonical,canonical_reference,,https://www.inven.co.kr/board/maple/2304/46432,User-selected canonical source table
+2025-09-04,season2,challenger_rank_or_reported_cumulative_count,6150,canonical,canonical_reference,,https://www.inven.co.kr/board/maple/2304/46432,User-selected canonical source table
+2025-09-11,season2,challenger_rank_or_reported_cumulative_count,7792,canonical,canonical_reference,,https://www.inven.co.kr/board/maple/2304/46432,User-selected canonical source table
+2025-09-18,season2,challenger_rank_or_reported_cumulative_count,9595,canonical,canonical_reference,,https://www.inven.co.kr/board/maple/2304/46432,User-selected canonical source table
+2025-09-25,season2,challenger_rank_or_reported_cumulative_count,11111,canonical,canonical_reference,,https://www.inven.co.kr/board/maple/2304/46432,User-selected canonical source table
+2025-10-02,season2,challenger_rank_or_reported_cumulative_count,11681,canonical,canonical_reference,,https://www.inven.co.kr/board/maple/2304/46432,User-selected canonical source table
+2025-10-09,season2,challenger_rank_or_reported_cumulative_count,15088,canonical,canonical_reference,,https://www.inven.co.kr/board/maple/2304/46432,User-selected canonical source table
+2025-10-16,season2,challenger_rank_or_reported_cumulative_count,16970,canonical,canonical_reference,,https://www.inven.co.kr/board/maple/2304/46432,User-selected canonical source table
+2025-10-23,season2,challenger_rank_or_reported_cumulative_count,18557,canonical,canonical_reference,,https://www.inven.co.kr/board/maple/2304/46432,User-selected canonical source table
+2025-10-30,season2,challenger_rank_or_reported_cumulative_count,20010,canonical,canonical_reference,,https://www.inven.co.kr/board/maple/2304/46432,User-selected canonical source table
+2025-11-06,season2,challenger_rank_or_reported_cumulative_count,21447,canonical,canonical_reference,,https://www.inven.co.kr/board/maple/2304/46432,User-selected canonical source table
+2025-11-13,season2,challenger_rank_or_reported_cumulative_count,23420,canonical,canonical_reference,,https://www.inven.co.kr/board/maple/2304/46432,User-selected canonical source table
+2025-11-19,season2,challenger_rank_or_reported_cumulative_count,25430,canonical,canonical_reference,,https://www.inven.co.kr/board/maple/2304/46432,User-selected canonical source table
+2025-12-18,season3,challenger_rank_or_reported_cumulative_count,,canonical,canonical_reference,,https://www.inven.co.kr/board/maple/2304/47306,User-selected canonical source table
+2025-12-25,season3,challenger_rank_or_reported_cumulative_count,2,canonical,canonical_reference,,https://www.inven.co.kr/board/maple/2304/47306,User-selected canonical source table
+2026-01-01,season3,challenger_rank_or_reported_cumulative_count,20,canonical,canonical_reference,,https://www.inven.co.kr/board/maple/2304/47306,User-selected canonical source table
+2026-01-08,season3,challenger_rank_or_reported_cumulative_count,89,canonical,canonical_reference,,https://www.inven.co.kr/board/maple/2304/47306,User-selected canonical source table
+2026-01-15,season3,challenger_rank_or_reported_cumulative_count,246,canonical,canonical_reference,,https://www.inven.co.kr/board/maple/2304/47306,User-selected canonical source table
+2026-01-22,season3,challenger_rank_or_reported_cumulative_count,478,canonical,canonical_reference,,https://www.inven.co.kr/board/maple/2304/47306,User-selected canonical source table
+2026-01-29,season3,challenger_rank_or_reported_cumulative_count,1017,canonical,canonical_reference,,https://www.inven.co.kr/board/maple/2304/47306,User-selected canonical source table
+2026-02-05,season3,challenger_rank_or_reported_cumulative_count,1504,canonical,canonical_reference,,https://www.inven.co.kr/board/maple/2304/47306,User-selected canonical source table
+2026-02-12,season3,challenger_rank_or_reported_cumulative_count,2220,canonical,canonical_reference,,https://www.inven.co.kr/board/maple/2304/47306,User-selected canonical source table
+2026-02-19,season3,challenger_rank_or_reported_cumulative_count,2951,canonical,canonical_reference,,https://www.inven.co.kr/board/maple/2304/47306,User-selected canonical source table
+2026-02-26,season3,challenger_rank_or_reported_cumulative_count,3788,canonical,canonical_reference,,https://www.inven.co.kr/board/maple/2304/47306,User-selected canonical source table
+2026-03-05,season3,challenger_rank_or_reported_cumulative_count,5789,canonical,canonical_reference,,https://www.inven.co.kr/board/maple/2304/47306,User-selected canonical source table
+2026-03-12,season3,challenger_rank_or_reported_cumulative_count,8290,canonical,canonical_reference,,https://www.inven.co.kr/board/maple/2304/47306,User-selected canonical source table
+2026-03-19,season3,challenger_rank_or_reported_cumulative_count,10480,canonical,canonical_reference,,https://www.inven.co.kr/board/maple/2304/47306,User-selected canonical source table
+2026-03-26,season3,challenger_rank_or_reported_cumulative_count,13307,canonical,canonical_reference,,https://www.inven.co.kr/board/maple/2304/47306,User-selected canonical source table
+2026-04-02,season3,challenger_rank_or_reported_cumulative_count,15230,canonical,canonical_reference,,https://www.inven.co.kr/board/maple/2304/47306,User-selected canonical source table
+2026-04-09,season3,challenger_rank_or_reported_cumulative_count,17552,canonical,canonical_reference,,https://www.inven.co.kr/board/maple/2304/47306,User-selected canonical source table
+2026-04-15,season3,challenger_rank_or_reported_cumulative_count,20990,canonical,canonical_reference,,https://www.inven.co.kr/board/maple/2304/47306,User-selected canonical source table
+2026-07-19,season4,challenger_rank_or_reported_cumulative_count,25704,text_claim,reported_not_independently_verified,,https://www.inven.co.kr/board/maple/5974/6905705,Current total claimed by poster; not verified screenshot
+2026-07-25,season4,challenger_rank_or_reported_cumulative_count,40000,text_claim,reported_not_independently_verified,,https://www.inven.co.kr/board/maple/5974/6939414,"Poster says over 40000; threshold, not exact equality"
+2026-08-11,season4,challenger_rank_or_reported_cumulative_count,100000,rank_post_title,lower_bound_at_observation_time,,https://www.inven.co.kr/board/maple/5974/7014203,Rank milestone from title; screenshot not yet verified; no personal capability inference

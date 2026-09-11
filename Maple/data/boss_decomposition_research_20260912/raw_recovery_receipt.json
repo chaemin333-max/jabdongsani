@@ -1,0 +1,18 @@
+{
+  "method": "single missing base64 character insertion; accepted ONLY on exact pre-existing SHA256",
+  "part": 0,
+  "insertion_offset": 5997,
+  "character": "H",
+  "sha256": "63e41f7c7d5c384971524a56df0dcc01a25fd888f808e9174b3195feb9dd6b41",
+  "bytes": 61198,
+  "original_part00_sha256": "4f39092f887916c6e708e266816e27f085b172294697df5ac54b4d4d8cd0540e",
+  "repaired_part00_sha256": "0e8310d4e8a5906c480392e9dc0fde933f0cf3ae92acd6604d953b2bfa8f6425",
+  "recovered_keys": [
+    "unit",
+    "total",
+    "source_data",
+    "normalization_S25_height",
+    "event_notes"
+  ],
+  "boss_array_present": false
+}
