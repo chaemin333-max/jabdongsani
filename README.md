@@ -1,7 +1,9 @@
 # jabdongsani
 stuffs
 
-##Constitution 
+## Constitution 
+
+
 잡다한 프로젝트들 여기다 전부 모아놓음 
 각 하위 폴더별로 별도의 agents.md 및 readme를 둘 수 있다. 
 
