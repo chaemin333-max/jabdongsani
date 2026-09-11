@@ -1,0 +1,35 @@
+{
+  "source": "Meaegi (meaegi.com) Next.js RSC payloads copied from the statistics pages",
+  "captured_date": "2026-09-11",
+  "population": {
+    "records": 141,
+    "start": "2023-12-28",
+    "end": "2026-09-03",
+    "fields": [
+      "date",
+      "group1",
+      "group2",
+      "total"
+    ],
+    "analysis_scope": "group1",
+    "note": "group1 is used as the non-Eos/non-Helios population cohort for this project."
+  },
+  "starforce": {
+    "records": 541,
+    "start": "2025-03-20",
+    "end": "2026-09-11",
+    "fields": [
+      "date",
+      "attempts",
+      "meso_cost",
+      "meso_per_attempt"
+    ],
+    "note": "These are Meaegi sample totals, not whole-game totals."
+  },
+  "probability_rows": 36,
+  "limitations": [
+    "No time-series of registered/API-linked sample character counts was present in the supplied RSC payloads.",
+    "No per-world daily starforce time series was present in the supplied RSC payloads.",
+    "Do not scale sample starforce totals to the full game without a sample-coverage model."
+  ]
+}
