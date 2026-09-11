@@ -31,6 +31,8 @@ class Assumptions:
     include_progression:bool=True
     population_provider:str='meaegi'
     solo_upper_control:bool=False
+    new_boss_adjustment:bool=False
+    opportunity_uptake:float=1.
 
 def inputs():
     rows=read(SOURCE/'boss_tier_weekly.csv');windows=read(SOURCE/'season_identification_windows.csv')
@@ -66,6 +68,15 @@ def fit_season(spec,win,rows,C,H):
     R=[];target=[]
     high=np.array([sum(float(r[f'tier{j}']) for j in range(cap+1,8)) for r in sr])
     high0=sum(float(pre[f'tier{j}']) for j in range(cap+1,8))
+    opportunity=np.ones(n)
+    if spec.new_boss_adjustment:
+        menu=read(ROOT/'Maple/data/new_boss_reward_opportunities/weekly_opportunity_factors.csv')
+        factors={(r['profile'],r['date']):float(r['opportunity_factor']) for r in menu}
+        cprofile='challenger_seren' if cap<=3 else 'challenger_extreme_suu'
+        c0=factors[(cprofile,pre['date'])];m0=factors[('main_upper',pre['date'])]
+        opportunity=np.array([1+spec.opportunity_uptake*(factors[(cprofile,str(d))]/c0-1) for d in ds])
+        main_opportunity=np.array([1+spec.opportunity_uptake*(factors[('main_upper',str(d))]/m0-1) for d in ds])
+        high=high/main_opportunity
     if spec.solo_upper_control and not closed:
         solo=read(SOURCE/'solo_clear_distribution.csv')
         upper=[r for r in solo if int(r['tier'])>cap]
@@ -81,6 +92,8 @@ def fit_season(spec,win,rows,C,H):
             post_b=float(post[f'tier{j+1}'])/100
             time=np.array([(d-start).days+7 for d in ds])/((end+timedelta(weeks=2)-start).days+7)
             highpost=sum(float(post[f'tier{k}']) for k in range(cap+1,8))
+            if spec.new_boss_adjustment:
+                highpost/=1+spec.opportunity_uptake*(factors[('main_upper',post['date'])]/m0-1)
             ht=np.clip((high-high0)/(highpost-high0),0,1) if abs(highpost-high0)>10 else time
             weight=(1-spec.high_control_weight)*time+spec.high_control_weight*ht
             reference=(1-weight)*pre_b[j]+weight*post_b
@@ -98,6 +111,8 @@ def fit_season(spec,win,rows,C,H):
         # Permit growth and changes; do not impose constant late capacity.
         for t in range(1,n-1):
             if np.all(counts[t-1:t+2]>0):
+                if np.ptp(opportunity[t-1:t+2])>1e-10:
+                    continue  # allow a menu/replacement break; do not call it a power shock
                 rr=np.zeros(p)
                 rr[(np.arange(t-1,t+2))*cap+j]=np.array([1,-2,1])/(counts[t-1:t+2]/1e5)/.5
                 R.append(rr);target.append(0.)
@@ -111,7 +126,7 @@ def fit_season(spec,win,rows,C,H):
         G.append(np.log1p(hv)/np.log1p(yy[-1]))
     G=np.array(G).T;project=np.eye(len(valid))-G@np.linalg.pinv(G)
     mapping=np.zeros((len(valid),p))
-    for q,t in enumerate(valid):mapping[q,t*cap:(t+1)*cap]=1/(counts[t]/1e5)
+    for q,t in enumerate(valid):mapping[q,t*cap:(t+1)*cap]=1/(counts[t]/1e5)/opportunity[t]
     R.extend(project@mapping/spec.growth_regularizer);target.extend(np.zeros(len(valid)))
     R=np.array(R);target=np.array(target)
     # Hard low-2 anchor before the first legal leap, exactly the user assumption.
@@ -163,8 +178,10 @@ def fit_season(spec,win,rows,C,H):
                     transferred_production_last=result[-1]['transferred_production_in_main'])
     return result,diagnostic
 
-def run():
-    OUT.mkdir(exist_ok=True,parents=True);rows,windows,C,A,H,CC=inputs();primary=Assumptions()
+def run(reward_adjusted=False,output=None):
+    global OUT
+    if output is not None:OUT=Path(output)
+    OUT.mkdir(exist_ok=True,parents=True);rows,windows,C,A,H,CC=inputs();primary=Assumptions(new_boss_adjustment=reward_adjusted)
     specs=[primary,replace(primary,name='no_transfers',transfer_fraction=0),
            replace(primary,name='all_declines_transfer',transfer_fraction=1),
            replace(primary,name='all_declines_full_productivity',transfer_fraction=1,transferred_productivity=1),
@@ -175,6 +192,9 @@ def run():
            replace(primary,name='chuchu_population',population_provider='chuchu'),
            replace(primary,name='without_progression',include_progression=False),
            replace(primary,name='weaker_main_bridge',main_tolerance=.3)]
+    if reward_adjusted:
+        specs.extend([replace(primary,name='opportunity_half',opportunity_uptake=.5),
+                      replace(primary,name='opportunity_off',new_boss_adjustment=False)])
     results=[];diagnostics=[]
     for spec in specs:
         ccounts=C if spec.population_provider=='meaegi' else {**C,**CC}
@@ -216,6 +236,10 @@ def run():
                       ROOT/'Maple/data/maple_production_calibration_inputs_weekly.csv',
                       ROOT/'Maple/data/boss_decomposition_research_20260912/chuchu_population_initial_data.json']},
                   scope='User-assumption-conditional tier decomposition; scenario envelopes are not confidence intervals')
+    if reward_adjusted:
+        p=ROOT/'Maple/data/new_boss_reward_opportunities/weekly_opportunity_factors.csv'
+        manifest['inputs'][str(p.relative_to(ROOT))]=hashlib.sha256(p.read_bytes()).hexdigest()
+        manifest['new_boss_rule']='Only Easy First Adversary is an ordinary new Challenger opportunity. Upper main signals are deflated by a fixed-access basket, never subtracting new income from observed production.'
     (OUT/'run_manifest.json').write_text(json.dumps(manifest,indent=2),encoding='utf-8')
     print('SUMMARY',json.dumps(summary),flush=True)
 

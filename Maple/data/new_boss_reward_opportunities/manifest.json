@@ -1,0 +1,36 @@
+{
+  "price_reference": "2026-08-20",
+  "future_test_prices_applied": false,
+  "weekly_limit": 12,
+  "monthly_black_mage_excluded": true,
+  "challenger_new_boss_exception": "Easy First Adversary only",
+  "other_new_bosses": "main-only assumption",
+  "season_bosses": "Kai/Meirin remain tier3; not double-added in this ordinary-crystal basket",
+  "limitations": [
+    "fixed access sets are scenarios, not combat-stat thresholds inferred from players",
+    "solo rewards; actual party sizes and take-up are unknown",
+    "Hard Bellona price not verified in the selected official tables, so excluded from this basket calculation"
+  ],
+  "release_catalog": {
+    "발드릭스": [
+      "2025-02-20",
+      "https://maplestory.nexon.com/news/update/766"
+    ],
+    "최초의대적자": [
+      "2025-08-21",
+      "https://maplestory.nexon.com/news/update/779"
+    ],
+    "찬란한흉성": [
+      "2026-01-15",
+      "https://maplestory.nexon.com/news/update/795"
+    ],
+    "유피테르": [
+      "2026-02-12",
+      "https://maplestory.nexon.com/news/update/797"
+    ],
+    "벨로나": [
+      "2026-08-20",
+      "https://maplestory.nexon.com/news/update/811"
+    ]
+  }
+}

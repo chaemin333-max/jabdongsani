@@ -12,7 +12,7 @@ date,event_code,title,tags,challenger_context,confidence,official_url,notes
 2025-04-17,CRYSTAL_ADJ_0417,Crystal price adjustment / Hyper Burning Booster,"reward_schedule_shock;population_inflow_shock;growth_support",season1,high,https://maplestory.nexon.com/news/update/768,"결정석 가격 직접 변경. V2에서는 external reward-table factor 사용."
 2025-06-19,ASSEMBLE_S2,ASSEMBLE,"population_inflow_shock;growth_support",pre-season2,high,https://maplestory.nexon.com/news/update/773,"대규모 여름 업데이트 및 S2 직전 유입. 6/12~6/19 A 급증과 B 증가가 동시에 관측됨."
 2025-07-17,ASCENT_HEXA,Ascent / new HEXA skills,"boss_accessibility_shock;growth_support",season2,high,https://maplestory.nexon.com/news/update/778,"전 직업 신규 HEXA 계열 전투력 증가. S2 w 상승의 구조적 설명 후보."
-2025-08-21,FIRST_ADVERSARY,The First Adversary,"new_boss_frontier_shock",season2,high,https://maplestory.nexon.com/news/update/780,"신규 상위 보스가 생산 frontier를 확장."
+2025-08-21,FIRST_ADVERSARY,The First Adversary,"new_boss_frontier_shock",season2,high,https://maplestory.nexon.com/news/update/779,"신규 상위 보스가 생산 frontier를 확장."
 2025-09-18,FALL_UPDATE,Fall/Epic Dungeon/Union content,"growth_support",season2,medium,https://maplestory.nexon.com/news/update/783,"중간 규모 성장/콘텐츠 업데이트."
 2025-10-23,CRYSTAL_ADJ_1023,Crystal price adjustment,"reward_schedule_shock;economy_content_shock",season2,high,https://maplestory.nexon.com/news/update/786,"결정석 가격 직접 변경. V2에서는 mixed B/A가 아닌 external factor 사용."
 2025-12-18,CROWN,CROWN,"population_inflow_shock;growth_support;boss_accessibility_shock",pre-season3,high,https://maplestory.nexon.com/news/update/791,"성장 동선·필드·심볼·유니온·V매트릭스 등 대규모 겨울 개편."
