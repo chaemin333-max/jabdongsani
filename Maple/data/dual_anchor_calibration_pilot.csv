@@ -1,0 +1,10 @@
+anchor_type,label,start_date,end_date,inflow_fraction,entrant_lambda_immediate,mature_w_cweighted,mature_muC,mature_muM,confidence,notes
+pure_main,MILESTONE,2024-06-13,2024-06-27,0.215773,0.639201,,,,medium,"lambda assumes pre-event B/A is incumbent productivity and no direct shock; mixed growth effects remain"
+pure_main,NEXT_prelaunch,2024-12-05,2024-12-12,0.306040,0.053227,,,,high_for_dilution,"large A inflow with almost flat B; strong composition dilution signature"
+pure_main,ASSEMBLE_prelaunch,2025-06-05,2025-06-12,0.345257,0.032182,,,,high_for_dilution,"largest clean pre-launch dilution episode; live patch follows next week"
+pure_main,CROWN,2025-12-11,2025-12-18,0.129744,0.442960,,,,medium,"moderate winter inflow; patch may also alter productivity"
+late_static,season1,2025-04-03,2025-04-10,,,0.636087,0.0000683845,0.000107516,medium,"~3.5 months after opening; after 3/20 power shock but before 4/17 crystal reward change"
+late_static,season2,2025-09-25,2025-10-16,,,0.492809,0.0000690614,0.000140136,high,"~3-4 months after opening; chosen before 10/23 crystal reward change"
+late_static,season3,2026-03-05,2026-03-12,,,0.671968,0.0001219910,0.000181491,high,"~11-12 weeks after opening; immediately before 3/19 main-world population composition shock"
+late_static,season4_broad,2026-08-13,2026-09-03,,,0.559644,0.0001664978,0.000297226,provisional,"near season end under accelerated Genesis regime; includes OVD3 boundary"
+late_static,season4_terminal,2026-08-20,2026-09-03,,,0.577629,0.0001728904,0.000299165,provisional,"last three available weekly rows; official season ends 2026-09-17"
