@@ -1,0 +1,18 @@
+{
+  "status": "CONDITIONAL_TOTAL_RECONSTRUCTION_NO_SELECTED_CENTRAL_LINE",
+  "last_week": "2026-08-20",
+  "cutoff": "2026-08-21",
+  "scale": 6.495250069,
+  "source_weeks": 53,
+  "three_component_feasible_weeks": 37,
+  "residual_definition": "total minus weekly boss; includes nonweekly boss and nonboss",
+  "scenario_ratios": "0, 0.5, 1, 2 are sensitivity choices, not estimated or confidence bounds",
+  "baseline": "Each scenario uses its own September 2025 mean; compare raw q for level uncertainty",
+  "bounds": "Residual allocation bounds conditional on fixed primary weekly boss allocation; not full model uncertainty",
+  "no_clipping": true,
+  "inputs": {
+    "data\\boss_productivity_weights_20260912\\weekly_weights.csv": "da7a4c571b8725be0f532c1a551d409916a87dc111197b3bcd3718f3a8573f7e",
+    "data\\meso_total_production_raw_canonical.json": "63e41f7c7d5c384971524a56df0dcc01a25fd888f808e9174b3195feb9dd6b41",
+    "data\\now_20260910\\production_by_source_weekly.csv": "2a1a53f07ff7626ff09e97f9908c8905893bf8758da016ae0858be54447a60f6"
+  }
+}
