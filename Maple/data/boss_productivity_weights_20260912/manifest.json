@@ -1,0 +1,20 @@
+{
+  "status": "CONDITIONAL_BOSS_WEIGHTS",
+  "source": "tier_boss_decomposition_reward_adjusted",
+  "cutoff": "2026-08-21",
+  "last_joint_week": "2026-08-20",
+  "definition": "w=(C_boss/C_accounts)/(M_boss/A_accounts)",
+  "E_definition": "A+w*C",
+  "quantity": "weekly boss production, not all boss rewards or total meso",
+  "baseline": "arithmetic mean of weekly main productivity during September 2025 = 100",
+  "baseline_raw": 0.000708629346910412,
+  "no_total_production_Q_updated": true,
+  "identity": "B/E=bM is an algebraic identity, not new independent evidence",
+  "patch_windows": "3 calendar weeks before; event week and next 2 weeks after; missing observations preserved",
+  "inputs": {
+    "Maple\\data\\tier_boss_decomposition_reward_adjusted\\weekly_decomposition.csv": "b6e134f09e5a23ac06e715f03ecd604012611d1522d4d56fc1a3b1ea26e75567",
+    "Maple\\data\\tier_boss_decomposition_reward_adjusted\\scenario_weekly.csv": "4eb9c7c725473b1bcbef59f689dbf2d94d5a5eeb751d5a4317ba42857e86fd40",
+    "Maple\\data\\maple_patch_event_layer_2024_2026.csv": "5fa8da9cd6382e732c939f76a79ebc207c21628f6fc9a3ac0d3c56050d0962e5",
+    "Maple\\data\\now_20260910\\season_identification_windows.csv": "2fbd441fb39c98c54076310b5b8edc6fe1355aef28defc20e126b2ef98738b7d"
+  }
+}

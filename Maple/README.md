@@ -1,5 +1,9 @@
 # Maple
 
+## 2026-09-12 주간 보스 생산성 가중치
+
+신규 보스 보상을 반영한 본섭·챌린저스 조건부 분해의 주간 `w`와 시즌 평균·패치 전후 비교는 [보고서](docs/BOSS_PRODUCTIVITY_WEIGHTS_2026-09-12.md), `data/boss_productivity_weights_20260912/`에 있습니다. 마지막 주 w=0.557이며, 기존 V3 총생산 Q와는 별도의 보스 생산성 지표입니다.
+
 ## 2026-09-12 보스 생산 공동분해 연구
 
 `docs/BOSS_DECOMPOSITION_JOINT_V1_RESULTS_2026-09-12.md`에 실제 공동 적합·시나리오·구간가림·가상자료 검사를 기록했습니다. 결과는 `data/boss_decomposition_joint_v1/`, 재현 코드는 `scripts/fit_boss_decomposition.py`입니다. 분석 종점은 2026-08-21이며 마지막 공동 주간 관측은 08-20입니다. 특히 마지막 챌린저스 생산 몫은 약하게 식별되므로 새 중심값을 정본으로 승격하지 않았습니다. 기존 V3는 비교용으로 보존합니다.
