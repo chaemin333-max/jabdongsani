@@ -1,0 +1,12 @@
+{
+  "source": "251016 \ubcf4\uc2a4\ubcc4\uba54\uc18c.png",
+  "sha256": "20f3784f77b2d2a5f318bc6c842c6ed6e3d5bb2f1090b95c693a121ee2e890c9",
+  "old_bars": 132,
+  "calendar": "last bar Oct 2 2025; ASSEMBLE June 19 at x~1031; weekly backwards",
+  "calibration_n": 16,
+  "holdout_n": 43,
+  "scale": 0.8978087663647707,
+  "holdout_MAPE": 0.02346796289008502,
+  "holdout_r_squared": 0.9914559363100798,
+  "scope": "Aggregate total only. Old/new tier taxonomy not assumed identical."
+}

@@ -1,0 +1,11 @@
+{
+  "k": 4,
+  "pooled_log_ratio": 0.4085805443770052,
+  "pooled_pct": 50.46804414260735,
+  "ci_lower_pct": 12.99894411668245,
+  "ci_upper_pct": 100.36145014525948,
+  "tau_squared": 0.03116474649832193,
+  "I_squared": 0.9753155902223033,
+  "hk_scale": 1.0,
+  "interpretation": "Descriptive four-episode synthesis; not independent randomized studies"
+}

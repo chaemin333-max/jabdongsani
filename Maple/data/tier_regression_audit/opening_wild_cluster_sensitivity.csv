@@ -1,0 +1,3 @@
+model,clusters,sign_patterns,observed_t,restricted_wild_sign_p,interpretation
+opening_local_FE_HAC2,4,16,8.464255259968104,0.125,four-event cluster sign sensitivity; not randomization inference from an experiment
+opening_local_FE_post_control_HAC2,4,16,4.488546790878706,0.125,four-event cluster sign sensitivity; not randomization inference from an experiment

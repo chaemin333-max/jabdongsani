@@ -1,0 +1,47 @@
+{
+  "seed": 20260912,
+  "regression_outcome": "observed RAW tier amounts, not estimated Challenger allocations",
+  "primary_regression": "low2_difference_upper_control_HAC4",
+  "meta_sampling": "3 pre-weeks vs 4/5 no-leap weeks; circular 2-week bootstrap, 3000 draws; REML modified HK",
+  "assumptions": "Four seasons descriptive; contemporaneous patches/confounding remain. Official imposed rates are not holdouts.",
+  "official": {
+    "source": "251016 \ubcf4\uc2a4\ubcc4\uba54\uc18c.png",
+    "sha256": "20f3784f77b2d2a5f318bc6c842c6ed6e3d5bb2f1090b95c693a121ee2e890c9",
+    "old_bars": 132,
+    "calendar": "last bar Oct 2 2025; ASSEMBLE June 19 at x~1031; weekly backwards",
+    "calibration_n": 16,
+    "holdout_n": 43,
+    "scale": 0.8978087663647707,
+    "holdout_MAPE": 0.02346796289008502,
+    "holdout_r_squared": 0.9914559363100798,
+    "scope": "Aggregate total only. Old/new tier taxonomy not assumed identical."
+  },
+  "meta": {
+    "k": 4,
+    "pooled_log_ratio": 0.4085805443770052,
+    "pooled_pct": 50.46804414260735,
+    "ci_lower_pct": 12.99894411668245,
+    "ci_upper_pct": 100.36145014525948,
+    "tau_squared": 0.03116474649832193,
+    "I_squared": 0.9753155902223033,
+    "hk_scale": 1.0,
+    "interpretation": "Descriptive four-episode synthesis; not independent randomized studies"
+  },
+  "source_hashes": {
+    "Maple\\data\\now_20260910\\boss_tier_weekly.csv": "b6ee336d45bf3f7843dfb7a69747527e238e68e58c90611edeb66908f7c163fa",
+    "Maple\\data\\now_20260910\\official_boss_production_growth.csv": "97b6dc2d2dfb23a99fe3fcde2d5f864ca07974c1f166be15bc0f81c8ba87802a",
+    "Maple\\data\\now_20260910\\solo_clear_distribution.csv": "ea1dad61069f1aa7d2313952c08649e7d5b7782de95da8ce9023b367b955331c",
+    "Maple\\data\\now_20260910\\season_identification_windows.csv": "2fbd441fb39c98c54076310b5b8edc6fe1355aef28defc20e126b2ef98738b7d",
+    "Maple\\data\\maple_production_calibration_inputs_weekly.csv": "cc1591aa3d27dbde473249757d4cf577ea056edce15fac9add14b6bb21f03e83",
+    "Maple\\data\\now_20260910\\production_by_source_weekly.csv": "2a1a53f07ff7626ff09e97f9908c8905893bf8758da016ae0858be54447a60f6",
+    "251016 \ubcf4\uc2a4\uaca9\ud30c\uc728.png": "9122bf18d689e6221a485fdc7d266647ff1314d6229eb95878c6e986d254ecda",
+    "Maple\\data\\tier_boss_decomposition_v1\\weekly_decomposition.csv": "cccf873532b1c75385a197b39059985f0c21297cf0b72d38d4f61659a38a27a9"
+  },
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.18.1",
+    "statsmodels": "0.15.0"
+  },
+  "script_sha256": "649028437a369c44af4b6adc271819a2a8fe8bb1668aeb49d0fa3c6703bc4fa1"
+}

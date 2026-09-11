@@ -1,0 +1,7 @@
+check,tier,official_multiplier,reconstructed_raw_multiplier,constrained_multiplier,evidence_class
+production_YoY,1,0.4,0.4230769230769231,0.4,constraint_reproduction_not_independent_validation
+production_YoY,2,0.98,0.9759036144578314,0.9800000000000001,constraint_reproduction_not_independent_validation
+production_YoY,3,4.03,4.0,4.03,constraint_reproduction_not_independent_validation
+production_YoY,4,8.24,7.7,8.24,constraint_reproduction_not_independent_validation
+production_YoY,5,10.73,,10.73,constraint_reproduction_not_independent_validation
+production_YoY,6,16.83,8.6,16.83,constraint_reproduction_not_independent_validation
