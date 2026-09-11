@@ -10,22 +10,24 @@
   - `group1`을 이 프로젝트의 본섭 인구 지표로 사용합니다.
   - 에오스·헬리오스(구 리부트)는 메소 총생산 공식 지표의 모집단과 맞지 않으므로 분석에서 제외합니다.
 
-- `data/meaegi_starforce_daily.csv`
+- `data/meaegi_starforce_daily_2025.csv`
+- `data/meaegi_starforce_daily_2026.csv`
   - 메애기 스타포스 통계 RSC payload의 `counts`와 `costs`를 날짜로 결합.
-  - 2025-03-20 ~ 2026-09-11, 일간.
+  - 전체 기간: 2025-03-20 ~ 2026-09-11, 일간.
   - `attempts`: 메애기 표본에서 관측된 스타포스 강화 횟수.
   - `meso_cost`: 메애기 표본에서 관측된 스타포스 메소 소모량.
+  - `meso_per_attempt`: 단순 `meso_cost / attempts` 파생값.
   - 이 값은 **전체 게임 스타포스 소각량이 아니라 메애기 표본 합계**입니다.
 
 - `data/meaegi_starforce_weekly.csv`
   - 일별 스타포스 자료를 목요일~수요일 단위로 합산하여 목요일 날짜로 표시.
-
-- `data/meaegi_population_starforce_weekly.csv`
-  - 주간 `group1` 인구와 스타포스 표본 자료를 같은 날짜축에 병합한 작업용 패널.
-  - `meso_cost_per_group1_user` 등은 **단순 진단용 비율**이며, 표본 coverage를 보정한 1인당 게임 전체 소비량이 아닙니다.
+  - 메애기 주간 인구수와 시계열을 맞추기 위한 분석용 집계입니다.
 
 - `data/meaegi_starforce_probability.csv`
   - RSC payload에 포함된 스타포스 별수별 성공/실패/파괴 집계.
+
+- `data/source_manifest.json`
+  - 원자료 범위, 필드, 제한사항을 기록한 manifest.
 
 자세한 파싱·사용 원칙은 `docs/METHODOLOGY.md`를 참고하세요.
 
