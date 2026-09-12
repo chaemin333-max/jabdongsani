@@ -1,0 +1,5 @@
+source,measurement,low_high_numeric,reason
+2311,five unstacked boss group lines,False,Hard Suu not separately named; zero and scale not printed
+2504,four stacked tier groups,True,
+2510,six stacked tier groups,True,
+2609,seven stacked tier groups,True,

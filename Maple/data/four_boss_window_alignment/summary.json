@@ -1,0 +1,39 @@
+{
+  "status": "THREE_STACKED_CHARTS_NUMERIC_2311_TAXONOMY_OPEN",
+  "pair_summary": [
+    {
+      "pair": "2504_2510",
+      "n": 80,
+      "start": "2023-03-30",
+      "end": "2025-03-13",
+      "MAE_pp": 6.9406278431958865,
+      "median_bias_pp": -6.854624140755597,
+      "max_abs_pp": 19.424353667109273
+    },
+    {
+      "pair": "2504_2609",
+      "n": 30,
+      "start": "2024-08-22",
+      "end": "2025-03-13",
+      "MAE_pp": 12.092433426235408,
+      "median_bias_pp": -11.597501088059634,
+      "max_abs_pp": 19.999482214052716
+    },
+    {
+      "pair": "2510_2609",
+      "n": 59,
+      "start": "2024-08-22",
+      "end": "2025-10-02",
+      "MAE_pp": 1.0492864129420394,
+      "median_bias_pp": -0.8960027836979689,
+      "max_abs_pp": 2.9135466303607913
+    }
+  ],
+  "2504_bar_count": 80,
+  "source_hashes": {
+    "assets\\sources\\four_now_originals\\250410 \ubcf4\uc2a4\uad6c\uac04\ubcc4.png": "2a4ae14cc6847901a1b8a2e5c95ea75d68f7ac6ef4932931a8458eae14609fe7",
+    "data\\tier_regression_audit\\official_20251016_pixels.csv": "413994666b2b6c932a0283424cdff87af0f24acc3700fea90d6f55428f700130",
+    "data\\now_20260910\\boss_tier_weekly.csv": "b6ee336d45bf3f7843dfb7a69747527e238e68e58c90611edeb66908f7c163fa"
+  },
+  "warning": "Source-specific stacked-bar shares; not common absolute meso scale. 2311 lacks identifiable Hard Suu allocation."
+}
