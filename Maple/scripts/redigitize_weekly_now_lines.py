@@ -169,6 +169,9 @@ for snap,chart,date,xf,grid_method in grid:
             color_distance=distance,grid_method=grid_method))
 
 out=pd.DataFrame(rows)
+out['analysis_status']=np.where(out.snapshot=='250410',
+    'PROVISIONAL_EQUAL_GRID_USE_250410_JOINT_WEEKLY_POINTS',
+    'SOURCE_WEEKLY_PIXEL_READING')
 out['calendar_status']=np.where(out.snapshot=='250410',
     'patch_anchored_nominal_thursday_week_label',
     np.where(out.snapshot=='231116','approximate_month_tick_week_label',

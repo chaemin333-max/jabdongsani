@@ -60,11 +60,17 @@
     "first_x": 1087,
     "observed_weeks": 24
   },
-  "strict_uniform_segment_test": "FAIL; interior bends >5px remain on boss/field",
-  "clear_kink_counts_by_series": {
+  "old_single_pixel_rigid_grid_false_flags": {
     "boss": 19,
     "field": 5,
     "other_coin": 10
+  },
+  "joint_point_size_audit": {
+    "weeks": 118,
+    "bend_candidates": 216,
+    "unmatched_bends": 0,
+    "straight_stroke_review_segments": 0,
+    "heldout_review_segments": 6
   },
   "scope": "raw source-image pixels and direct printed shares only",
   "no_new_total_estimate": true,

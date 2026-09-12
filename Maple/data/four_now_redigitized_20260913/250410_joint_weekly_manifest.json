@@ -1,0 +1,67 @@
+{
+  "launch_anchor": {
+    "date": "2024-10-17",
+    "x": 1087
+  },
+  "weeks": 118,
+  "mean_dx_pixels": 7.598290598290598,
+  "dx_histogram": {
+    "6": 5,
+    "7": 44,
+    "8": 62,
+    "9": 5,
+    "10": 1
+  },
+  "raw_corner_candidates": 216,
+  "merged_bend_markers": 206,
+  "unmatched_bend_candidates": 0,
+  "max_bend_to_shared_week_x_px": 4,
+  "straight_stroke_envelope_px": 6,
+  "point_disc_radius_x_px": 2,
+  "vertex_centre_allowance_y_px": 4,
+  "measured_stroke_widths_px": {
+    "azmoth": {
+      "median_px": 5.0,
+      "p95_px": 8.25
+    },
+    "boss": {
+      "median_px": 4.0,
+      "p95_px": 10.0
+    },
+    "field": {
+      "median_px": 4.0,
+      "p95_px": 6.0
+    },
+    "other_coin": {
+      "median_px": 3.0,
+      "p95_px": 7.0
+    }
+  },
+  "equal_grid_review_counts": {
+    "azmoth": 0,
+    "boss": 4,
+    "field": 3,
+    "other_coin": 4
+  },
+  "leave_one_source_out_review_counts": {
+    "boss": 2,
+    "field": 3,
+    "azmoth": 0,
+    "other_coin": 1
+  },
+  "segment_verdicts": {
+    "azmoth": {
+      "WITHIN_STROKE_AND_POINT_SIZE": 23
+    },
+    "boss": {
+      "WITHIN_STROKE_AND_POINT_SIZE": 116
+    },
+    "field": {
+      "WITHIN_STROKE_AND_POINT_SIZE": 117
+    },
+    "other_coin": {
+      "WITHIN_STROKE_AND_POINT_SIZE": 56
+    }
+  },
+  "interpretation": "shared weekly x estimates and point-size-consistent straight strokes; point centres remain pixel intervals"
+}

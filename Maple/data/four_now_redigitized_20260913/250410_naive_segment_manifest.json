@@ -1,5 +1,5 @@
 {
-  "method": "each original x column compared with chord between consecutive anchored Thursday points",
+  "method": "naive centreline-to-chord comparison that ignores rendered point discs",
   "tolerance_px": 3,
   "clear_kink_threshold_px": 5,
   "counts": [
@@ -77,7 +77,7 @@
     "best_first_x": 1089,
     "best_pixels_per_week": 7.659999999999996
   },
-  "concrete_counterexample": {
+  "thick_point_false_positive_example": {
     "date_start": "2025-01-23",
     "date_end": "2025-01-30",
     "endpoint_x": [
@@ -89,5 +89,5 @@
     "chord_interior_y": 347.5,
     "deviation_px": 16.5
   },
-  "no_claim_of_perfect_straightness": true
+  "validity": "diagnostic only; not a valid rejection test for a thick-point weekly chart"
 }

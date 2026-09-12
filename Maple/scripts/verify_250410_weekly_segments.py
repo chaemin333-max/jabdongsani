@@ -79,9 +79,9 @@ for name,g in traces.items():
                     'REVIEW_3_TO_5PX' if maximum<=5 else 'INTERIOR_KINK_GT5PX'))
 
 result=pd.DataFrame(results)
-result.to_csv(O/'250410_weekly_segment_straightness.csv',index=False)
+result.to_csv(O/'250410_naive_segment_straightness.csv',index=False)
 counts=result.groupby(['series','verdict']).size().rename('segments').reset_index()
-counts.to_csv(O/'250410_weekly_segment_summary.csv',index=False)
+counts.to_csv(O/'250410_naive_segment_summary.csv',index=False)
 
 def grid_bad_count(launch_x,spacing,name):
     t=traces[name].set_index('x_pixel').y_pixel
@@ -111,7 +111,7 @@ for first in range(1085,1090):
         item['boss_field_gt5px']=item['boss_gt5px']+item['field_gt5px']
         sweep.append(item)
 sweep=pd.DataFrame(sweep)
-sweep.to_csv(O/'250410_grid_sensitivity.csv',index=False)
+sweep.to_csv(O/'250410_naive_grid_sensitivity.csv',index=False)
 best=sweep.sort_values(['boss_field_gt5px','azmoth_gt5px']).iloc[0]
 
 canvas=Image.open(SRC).convert('RGB');draw=ImageDraw.Draw(canvas)
@@ -119,23 +119,23 @@ for row in result.itertuples():
     if row.verdict=='INTERIOR_KINK_GT5PX':
         x=(row.x_start+row.x_end)//2
         draw.line((x,285,x,825),fill='#ff00aa',width=1)
-canvas.save(O/'250410_segment_kink_qa.png')
+canvas.save(O/'250410_naive_flags_qa.png')
 example=Image.open(SRC).convert('RGB').crop((1187,312,1210,377)).resize((460,1300))
 edraw=ImageDraw.Draw(example)
 for x,y,color in [(1193,361,'#00d833'),(1196,364,'#ec00ad'),(1201,325,'#00d833')]:
     xx=(x-1187)*20;yy=(y-312)*20
     edraw.ellipse((xx-7,yy-7,xx+7,yy+7),fill=color)
-example.save(O/'250410_original_interior_kink_example.png')
-receipt=dict(method='each original x column compared with chord between consecutive anchored Thursday points',
+example.save(O/'250410_thick_point_example.png')
+receipt=dict(method='naive centreline-to-chord comparison that ignores rendered point discs',
     tolerance_px=3,clear_kink_threshold_px=5,
     counts=counts.to_dict(orient='records'),
     uniform_grid_sensitivity=dict(first_x_range=[1085,1089],pixels_per_week_range=[7.45,7.75],
         best_boss_field_gt5px=int(best.boss_field_gt5px),
         best_first_x=int(best.first_x),best_pixels_per_week=float(best.pixels_per_week)),
-    concrete_counterexample=dict(date_start='2025-01-23',date_end='2025-01-30',
+    thick_point_false_positive_example=dict(date_start='2025-01-23',date_end='2025-01-30',
         endpoint_x=[1193,1201],interior_kink_x=1196,
         observed_interior_y=364,chord_interior_y=347.5,deviation_px=16.5),
-    no_claim_of_perfect_straightness=bool((result.verdict!='STRAIGHT_WITHIN_3PX').any()))
-(O/'250410_segment_straightness_manifest.json').write_text(
+    validity='diagnostic only; not a valid rejection test for a thick-point weekly chart')
+(O/'250410_naive_segment_manifest.json').write_text(
     json.dumps(receipt,ensure_ascii=False,indent=2),encoding='utf-8')
 print(json.dumps(receipt,ensure_ascii=False,indent=2))

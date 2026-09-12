@@ -1,15 +1,47 @@
 {
-  "interpretation": "diagnostic only; launch x=1087 fixed; each other week allowed ±3px",
-  "shifted_weeks": 58,
+  "interpretation": "shared point-centre estimate; launch x=1087 fixed; each other week allowed ±3px within rendered disc",
+  "shifted_weeks": 53,
   "max_shift_px": 3,
+  "leave_one_source_out": [
+    {
+      "held_out_series": "boss",
+      "segments": 116,
+      "review_gt6px": 2,
+      "maximum_residual_px": 9.100000000000023,
+      "launch_x_fixed": 1087
+    },
+    {
+      "held_out_series": "field",
+      "segments": 117,
+      "review_gt6px": 3,
+      "maximum_residual_px": 7.0,
+      "launch_x_fixed": 1087
+    },
+    {
+      "held_out_series": "azmoth",
+      "segments": 23,
+      "review_gt6px": 0,
+      "maximum_residual_px": 1.3333333333332575,
+      "launch_x_fixed": 1087
+    },
+    {
+      "held_out_series": "other_coin",
+      "segments": 56,
+      "review_gt6px": 1,
+      "maximum_residual_px": 10.5,
+      "launch_x_fixed": 1087
+    }
+  ],
   "count_gt5px": {
     "azmoth": 0,
-    "boss": 11,
-    "field": 2
+    "boss": 12,
+    "field": 2,
+    "other_coin": 7
   },
   "count_segments": {
-    "azmoth": 22,
-    "boss": 115,
-    "field": 116
+    "azmoth": 23,
+    "boss": 117,
+    "field": 117,
+    "other_coin": 56
   }
 }

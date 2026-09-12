@@ -69,16 +69,29 @@ assert weekly_counts.loc[('260910','production_sources')]==53
 cyan=weekly[(weekly.snapshot=='250410')&(weekly.series=='azmoth')&
             (weekly.status=='direct_weekly_rgb')].sort_values('date')
 assert len(cyan)==24 and cyan.iloc[0].date=='2024-10-17' and cyan.iloc[0].x_pixel==1087
-straight=pd.read_csv(O/'250410_weekly_segment_straightness.csv')
+straight=pd.read_csv(O/'250410_naive_segment_straightness.csv')
 clear_kinks=straight[straight.verdict=='INTERIOR_KINK_GT5PX'].groupby('series').size().to_dict()
 assert clear_kinks.get('azmoth',0)==0 and clear_kinks.get('boss',0)>0
+joint=json.loads((O/'250410_joint_weekly_manifest.json').read_text(encoding='utf-8'))
+joint_axis=pd.read_csv(O/'250410_joint_weekly_axis.csv')
+joint_points=pd.read_csv(O/'250410_joint_weekly_points.csv')
+point_test=pd.read_csv(O/'250410_point_aware_segment_test.csv')
+heldout=pd.read_csv(O/'250410_leave_one_source_out.csv')
+assert len(joint_axis)==118 and joint_axis.loc[joint_axis.date=='2024-10-17','x_week'].iloc[0]==1087
+assert joint['unmatched_bend_candidates']==0
+assert (point_test.verdict=='WITHIN_STROKE_AND_POINT_SIZE').all()
+assert (joint_points.groupby('date').x_week.nunique()==1).all()
 receipt={'total_image_independent_reread_qa':total_qa,
          'boss_overlap_summary':summary,
          'boss_bar_counts':{s:int(len(g)) for s,g in bars.groupby('snapshot')},
          'weekly_line_chart_counts':{f'{s}/{c}':int(n) for (s,c),n in weekly_counts.items()},
          'azmoth_launch_week':dict(first_date='2024-10-17',first_x=1087,observed_weeks=24),
-         'strict_uniform_segment_test':'FAIL; interior bends >5px remain on boss/field',
-         'clear_kink_counts_by_series':{k:int(v) for k,v in clear_kinks.items()},
+         'old_single_pixel_rigid_grid_false_flags':{k:int(v) for k,v in clear_kinks.items()},
+         'joint_point_size_audit':dict(weeks=int(joint['weeks']),
+            bend_candidates=int(joint['raw_corner_candidates']),
+            unmatched_bends=int(joint['unmatched_bend_candidates']),
+            straight_stroke_review_segments=int((point_test.verdict!='WITHIN_STROKE_AND_POINT_SIZE').sum()),
+            heldout_review_segments=int(heldout.review_gt6px.sum())),
          'scope':'raw source-image pixels and direct printed shares only',
          'no_new_total_estimate':True,
          'zero_policy':'unknown for line charts; never infer money from y pixels or fill unresolved components'}
