@@ -1,0 +1,72 @@
+{
+  "status": "PIXEL_CHANGE_ONLY_NO_ZERO_ASSUMPTION",
+  "mapping": {
+    "2311": "Hard Damien-Hard Jin Hilla; Hard Suu assigned here by user assumption",
+    "2504": "Hard Suu-Hard Black Mage proxy for requested tier; includes above Hard Jin Hilla",
+    "2510": "Hard Damien-Hard Jin Hilla; Hard Suu assigned here by user assumption",
+    "2609": "Hard Suu-Hard Jin Hilla"
+  },
+  "pairs": [
+    {
+      "pair": "2311_2504",
+      "start": "2023-04-01",
+      "end": "2023-10-28",
+      "weeks": 31,
+      "difference_pairs": 30,
+      "difference_scale_k": 0.09341923941162728,
+      "weekly_change_correlation": 0.20027065749975767,
+      "same_direction_fraction": 0.7,
+      "RMSE_in_right_image_pixels": 3.544901385415845,
+      "RMSE_over_right_10_90_span_pct": 7.97887771637007
+    },
+    {
+      "pair": "2311_2510",
+      "start": "2023-04-01",
+      "end": "2023-10-28",
+      "weeks": 31,
+      "difference_pairs": 30,
+      "difference_scale_k": 0.05881803714328601,
+      "weekly_change_correlation": 0.4819353034316414,
+      "same_direction_fraction": 0.7333333333333333,
+      "RMSE_in_right_image_pixels": 0.8692224232301502,
+      "RMSE_over_right_10_90_span_pct": 3.088607595234036
+    },
+    {
+      "pair": "2504_2510",
+      "start": "2023-03-30",
+      "end": "2025-03-13",
+      "weeks": 103,
+      "difference_pairs": 83,
+      "difference_scale_k": 0.11520956833991658,
+      "weekly_change_correlation": 0.2625406100339047,
+      "same_direction_fraction": 0.5903614457831325,
+      "RMSE_in_right_image_pixels": 2.423986965670076,
+      "RMSE_over_right_10_90_span_pct": 2.3811266853340634
+    },
+    {
+      "pair": "2504_2609",
+      "start": "2024-08-22",
+      "end": "2025-03-13",
+      "weeks": 30,
+      "difference_pairs": 29,
+      "difference_scale_k": 0.16005720724867054,
+      "weekly_change_correlation": 0.39945394838306164,
+      "same_direction_fraction": 0.5172413793103449,
+      "RMSE_in_right_image_pixels": 3.2634858145744747,
+      "RMSE_over_right_10_90_span_pct": 6.799085461735058
+    },
+    {
+      "pair": "2510_2609",
+      "start": "2024-08-22",
+      "end": "2025-10-02",
+      "weeks": 59,
+      "difference_pairs": 58,
+      "difference_scale_k": 0.8989631655043565,
+      "weekly_change_correlation": 0.9737608322143854,
+      "same_direction_fraction": 0.8103448275862069,
+      "RMSE_in_right_image_pixels": 2.0092449407592787,
+      "RMSE_over_right_10_90_span_pct": 1.386832963853499
+    }
+  ],
+  "warning": "Change correlations do not establish equal level, zero, or category scope. 2504 includes bosses through Black Mage. Weekly grids interpolate pixel observations."
+}
