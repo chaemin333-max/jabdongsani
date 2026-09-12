@@ -1,0 +1,118 @@
+{
+  "zero_y_fit_to_official_shares": 824.0000295505364,
+  "fit_rmse_pp": 1.489350714581206,
+  "zero_y_fit_September_only": 824.0000295505364,
+  "October_share_RMSE_with_September_zero_pp": 1.6466609662490952,
+  "original_826_rmse_pp": 1.6139572150614154,
+  "note": "Post-result intercept fit on official 2410 shares; not an independent validation. A common y0 and included sources are assumptions.",
+  "bar_source": [
+    {
+      "source": "2504",
+      "window_start": "2023-03-30",
+      "window_end": "2025-03-13",
+      "plotted_matches": 80,
+      "valid_adjacent_changes": 71,
+      "smooth_weeks": 1,
+      "n": 71,
+      "difference_corr": 0.11329790893344766,
+      "difference_scale": 0.17677942843505756,
+      "change_rmse": 14.132772100089042
+    },
+    {
+      "source": "2504",
+      "window_start": "2023-03-30",
+      "window_end": "2025-03-13",
+      "plotted_matches": 80,
+      "valid_adjacent_changes": 71,
+      "smooth_weeks": 3,
+      "n": 69,
+      "difference_corr": 0.592699897626196,
+      "difference_scale": 0.6404246204920885,
+      "change_rmse": 7.890193033426436
+    },
+    {
+      "source": "2504",
+      "window_start": "2023-03-30",
+      "window_end": "2025-03-13",
+      "plotted_matches": 80,
+      "valid_adjacent_changes": 71,
+      "smooth_weeks": 5,
+      "n": 67,
+      "difference_corr": 0.759507739235255,
+      "difference_scale": 0.7964203713898249,
+      "change_rmse": 5.248434100062753
+    },
+    {
+      "source": "2510",
+      "window_start": "2025-04-17",
+      "window_end": "2025-10-02",
+      "plotted_matches": 25,
+      "valid_adjacent_changes": 24,
+      "smooth_weeks": 1,
+      "n": 24,
+      "difference_corr": 0.8720058170582887,
+      "difference_scale": 0.9110589025004195,
+      "change_rmse": 10.588363181362604
+    },
+    {
+      "source": "2510",
+      "window_start": "2025-04-17",
+      "window_end": "2025-10-02",
+      "plotted_matches": 25,
+      "valid_adjacent_changes": 24,
+      "smooth_weeks": 3,
+      "n": 22,
+      "difference_corr": 0.9607812902969467,
+      "difference_scale": 0.9084483492430232,
+      "change_rmse": 4.03180813103857
+    },
+    {
+      "source": "2510",
+      "window_start": "2025-04-17",
+      "window_end": "2025-10-02",
+      "plotted_matches": 25,
+      "valid_adjacent_changes": 24,
+      "smooth_weeks": 5,
+      "n": 20,
+      "difference_corr": 0.990342381260068,
+      "difference_scale": 0.9031835821877261,
+      "change_rmse": 1.6619020104814493
+    },
+    {
+      "source": "2609",
+      "window_start": "2025-08-21",
+      "window_end": "2026-08-20",
+      "plotted_matches": 53,
+      "valid_adjacent_changes": 52,
+      "smooth_weeks": 1,
+      "n": 52,
+      "difference_corr": 0.5279799484699742,
+      "difference_scale": 0.4199836298953132,
+      "change_rmse": 16.09168895127314
+    },
+    {
+      "source": "2609",
+      "window_start": "2025-08-21",
+      "window_end": "2026-08-20",
+      "plotted_matches": 53,
+      "valid_adjacent_changes": 52,
+      "smooth_weeks": 3,
+      "n": 50,
+      "difference_corr": 0.7624800803483226,
+      "difference_scale": 0.38994207634069183,
+      "change_rmse": 6.555052812224721
+    },
+    {
+      "source": "2609",
+      "window_start": "2025-08-21",
+      "window_end": "2026-08-20",
+      "plotted_matches": 53,
+      "valid_adjacent_changes": 52,
+      "smooth_weeks": 5,
+      "n": 48,
+      "difference_corr": 0.9587375296687717,
+      "difference_scale": 0.3977803332694326,
+      "change_rmse": 2.1356971358612125
+    }
+  ]
+}
