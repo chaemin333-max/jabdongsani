@@ -1,0 +1,48 @@
+{
+  "scale": 0.46130060976932963,
+  "scale_window": "2024-04-01 through 2024-06-30",
+  "forward_holdout": "2024-07-01 onward",
+  "date_calibration": "linear mapping from six interior printed month tick centers; no curve-fitting date shift",
+  "month_ticks": [
+    3,
+    7,
+    11,
+    15,
+    19,
+    23
+  ],
+  "pixel_ticks": [
+    474,
+    606,
+    738,
+    870,
+    1003,
+    1135
+  ],
+  "zero_y": 826,
+  "important": "independent image holdout, not a forecast OOS; canonical provenance may share official history; source scope incl. Ursus unresolved",
+  "hashes": {
+    "assets\\sources\\20250410\\production_by_source.jpg": "50cbc06bd8e1249947b06418805ecfb223eba4225d60455573f092f7a1d96f97",
+    "data\\meso_total_production_raw_canonical.json": "63e41f7c7d5c384971524a56df0dcc01a25fd888f808e9174b3195feb9dd6b41"
+  },
+  "metrics": [
+    {
+      "window": "earlier_comparison",
+      "n_pixels": 168,
+      "MAPE_pct": 7.043542576871695,
+      "median_bias_pct": -8.039786381212794
+    },
+    {
+      "window": "forward_holdout",
+      "n_pixels": 98,
+      "MAPE_pct": 8.70101566816708,
+      "median_bias_pct": 7.8324776207754905
+    },
+    {
+      "window": "scale_calibration",
+      "n_pixels": 33,
+      "MAPE_pct": 0.9043510260671079,
+      "median_bias_pct": 0.0
+    }
+  ]
+}
