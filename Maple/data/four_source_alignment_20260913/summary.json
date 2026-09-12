@@ -1,0 +1,147 @@
+{
+  "pairs": [
+    {
+      "source1": "2311",
+      "source2": "2504",
+      "status": "COMPARABLE",
+      "metric": "mean_abs_BF_share_difference_pp",
+      "value": 1.001340188693183,
+      "reason": "2023AprOct; excludes Ursus from both denominators; no scale fit"
+    },
+    {
+      "source1": "2311",
+      "source2": "2510",
+      "status": "NO_COMMON_OBSERVABLE",
+      "metric": "",
+      "value": null,
+      "reason": "October total covers 2023 but has no contemporaneous B/F split; old boss tiers omit monthly/daily scopes"
+    },
+    {
+      "source1": "2311",
+      "source2": "2609",
+      "status": "NO_COMMON_OBSERVABLE",
+      "metric": "",
+      "value": null,
+      "reason": "No overlapping dates for same observable"
+    },
+    {
+      "source1": "2504",
+      "source2": "2510",
+      "status": "CONDITIONAL_COMPARABLE",
+      "metric": "postAzmoth_MAPE_free_zero_pct",
+      "value": 11.991565328476753,
+      "reason": "April source sum versus October total; source scope and zero not established"
+    },
+    {
+      "source1": "2504",
+      "source2": "2609",
+      "status": "NO_COMMON_OBSERVABLE",
+      "metric": "",
+      "value": null,
+      "reason": "No overlapping dates for same observable"
+    },
+    {
+      "source1": "2510",
+      "source2": "2609",
+      "status": "COMPARABLE",
+      "metric": "mean_abs_BF_share_difference_pp",
+      "value": 0.21559719511117295,
+      "reason": "6 overlapping observed weeks; boss reward and field only; no total canonical fitting"
+    }
+  ],
+  "zero_sensitivity": [
+    {
+      "comparison": "2504_sum_to_2510_total",
+      "zero_y": 748.0,
+      "fit": "one_scale_2024JanSep",
+      "scale": 0.24608501118568232,
+      "intercept_px": 0,
+      "train_MAPE": 4.37445163226235,
+      "holdout_MAPE": 7.227142204317978,
+      "holdout_bias": 7.612310296874051
+    },
+    {
+      "comparison": "2504_sum_to_2510_total",
+      "zero_y": 750.0,
+      "fit": "one_scale_2024JanSep",
+      "scale": 0.2505592841163311,
+      "intercept_px": 0,
+      "train_MAPE": 4.234346966526558,
+      "holdout_MAPE": 7.783484590724633,
+      "holdout_bias": 7.99969142945306
+    },
+    {
+      "comparison": "2504_sum_to_2510_total",
+      "zero_y": 752.0,
+      "fit": "one_scale_2024JanSep",
+      "scale": 0.2550335570469799,
+      "intercept_px": 0,
+      "train_MAPE": 4.0995360862718115,
+      "holdout_MAPE": 8.327601016770803,
+      "holdout_bias": 8.219193662810106
+    },
+    {
+      "comparison": "2504_sum_to_2510_total",
+      "zero_y": 778.3827686,
+      "fit": "one_scale_2024JanSep",
+      "scale": 0.31405541073825494,
+      "intercept_px": 0,
+      "train_MAPE": 2.7942758965106633,
+      "holdout_MAPE": 14.530449828330362,
+      "holdout_bias": 16.09741836499426
+    },
+    {
+      "comparison": "2504_sum_to_2510_total",
+      "zero_y": 764.9057820012641,
+      "fit": "free_zero_2024JanSep",
+      "scale": 0.28497644376204195,
+      "intercept_px": -764.9057820012641,
+      "train_MAPE": 3.3919685542746305,
+      "holdout_MAPE": 11.991565328476753,
+      "holdout_bias": 12.405021732955975
+    }
+  ],
+  "joint_combinations": [
+    {
+      "sources": "2311+2504+2510",
+      "comparable_edges": 2,
+      "independent_cycle_count": 0,
+      "status": "NOT_IDENTIFIABLE_AS_COMMON_CURVE",
+      "error": "",
+      "reason": "No common-time common-variable dataset; no closed independent comparison cycle; cannot assign one source as culprit"
+    },
+    {
+      "sources": "2311+2504+2609",
+      "comparable_edges": 1,
+      "independent_cycle_count": 0,
+      "status": "NOT_IDENTIFIABLE_AS_COMMON_CURVE",
+      "error": "",
+      "reason": "No common-time common-variable dataset; no closed independent comparison cycle; cannot assign one source as culprit"
+    },
+    {
+      "sources": "2311+2510+2609",
+      "comparable_edges": 1,
+      "independent_cycle_count": 0,
+      "status": "NOT_IDENTIFIABLE_AS_COMMON_CURVE",
+      "error": "",
+      "reason": "No common-time common-variable dataset; no closed independent comparison cycle; cannot assign one source as culprit"
+    },
+    {
+      "sources": "2504+2510+2609",
+      "comparable_edges": 2,
+      "independent_cycle_count": 0,
+      "status": "NOT_IDENTIFIABLE_AS_COMMON_CURVE",
+      "error": "",
+      "reason": "No common-time common-variable dataset; no closed independent comparison cycle; cannot assign one source as culprit"
+    },
+    {
+      "sources": "2311+2504+2510+2609",
+      "comparable_edges": 3,
+      "independent_cycle_count": 0,
+      "status": "NOT_IDENTIFIABLE_AS_COMMON_CURVE",
+      "error": "",
+      "reason": "No common-time common-variable dataset; no closed independent comparison cycle; cannot assign one source as culprit"
+    }
+  ],
+  "conclusion": "2504-only outlier not established. MAPE and percentage-point differences are different metrics, not rankable in one score."
+}

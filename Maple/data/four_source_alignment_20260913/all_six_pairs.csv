@@ -1,0 +1,7 @@
+source1,source2,status,metric,value,reason
+2311,2504,COMPARABLE,mean_abs_BF_share_difference_pp,1.001340188693183,2023AprOct; excludes Ursus from both denominators; no scale fit
+2311,2510,NO_COMMON_OBSERVABLE,,,October total covers 2023 but has no contemporaneous B/F split; old boss tiers omit monthly/daily scopes
+2311,2609,NO_COMMON_OBSERVABLE,,,No overlapping dates for same observable
+2504,2510,CONDITIONAL_COMPARABLE,postAzmoth_MAPE_free_zero_pct,11.991565328476753,April source sum versus October total; source scope and zero not established
+2504,2609,NO_COMMON_OBSERVABLE,,,No overlapping dates for same observable
+2510,2609,COMPARABLE,mean_abs_BF_share_difference_pp,0.21559719511117295,6 overlapping observed weeks; boss reward and field only; no total canonical fitting

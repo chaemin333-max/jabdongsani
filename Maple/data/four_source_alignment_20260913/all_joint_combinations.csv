@@ -1,0 +1,6 @@
+sources,comparable_edges,independent_cycle_count,status,error,reason
+2311+2504+2510,2,0,NOT_IDENTIFIABLE_AS_COMMON_CURVE,,No common-time common-variable dataset; no closed independent comparison cycle; cannot assign one source as culprit
+2311+2504+2609,1,0,NOT_IDENTIFIABLE_AS_COMMON_CURVE,,No common-time common-variable dataset; no closed independent comparison cycle; cannot assign one source as culprit
+2311+2510+2609,1,0,NOT_IDENTIFIABLE_AS_COMMON_CURVE,,No common-time common-variable dataset; no closed independent comparison cycle; cannot assign one source as culprit
+2504+2510+2609,2,0,NOT_IDENTIFIABLE_AS_COMMON_CURVE,,No common-time common-variable dataset; no closed independent comparison cycle; cannot assign one source as culprit
+2311+2504+2510+2609,3,0,NOT_IDENTIFIABLE_AS_COMMON_CURVE,,No common-time common-variable dataset; no closed independent comparison cycle; cannot assign one source as culprit
