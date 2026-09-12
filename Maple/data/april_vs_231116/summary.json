@@ -1,0 +1,11 @@
+{
+  "full_months": 7,
+  "mean_abs_BF_difference_pp": 1.001340188693183,
+  "mean_abs_field_direct_difference_pp": 1.872828390036305,
+  "mean_abs_field_ursus_adjusted_difference_pp": 1.1468834402358539,
+  "max_abs_BF_difference_pp": 3.3548581008369425,
+  "method": "daily integration of interpolated image heights; ratio of sums; no scale fitting; no adjustment to original curves",
+  "November": "partial window unknown; 1-15 and 1-16 alternatives; excluded from main summary",
+  "Ursus_adjustment": "conditional denominator diagnostic; not proof of exclusion",
+  "source_sha256": "865d6974b2712fe2196580a52c72635d3392d0004227bd1cf74e7b809d1fa950"
+}
