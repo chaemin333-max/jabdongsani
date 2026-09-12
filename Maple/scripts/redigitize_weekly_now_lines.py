@@ -16,6 +16,9 @@ R=Path(__file__).resolve().parents[1]
 S=R/'assets/sources/four_now_originals'
 O=R/'data/four_now_redigitized_20260913'
 dense=pd.read_csv(O/'raster_trace_nonweekly.csv',dtype={'snapshot':str})
+azmoth=pd.read_csv(O/'azmoth_light_cyan_raster.csv').set_index('x_pixel')
+azmoth_manifest=json.loads((O/'azmoth_light_cyan_manifest.json').read_text(encoding='utf-8'))
+azmoth_first_x=int(azmoth_manifest['first_pixel_x'])
 
 # Patch-kink x coordinates are read from the production curves, not from
 # decorative NEW AGE/NEXT arrows (which can mark a presentation date).
@@ -42,9 +45,15 @@ for p in np.arange(7.45,7.751,.005):
             recovered=np.interp(knots,xx,yy)
             loss+=float(np.mean((np.interp(xx,knots,recovered)-yy)**2))
         choices.append((loss,float(p),float(c)))
-polyline_loss,px_per_week,x_at_newage=min(choices)
-azmoth_x=float(x_at_newage+70*px_per_week) # 2024-10-17 = 70 weeks later
-assert abs(azmoth_x-1086)<3
+polyline_loss,vertex_px_per_week,vertex_x_at_newage=min(choices)
+# The user-specified datum is the *first cyan point*, whose original pixel is
+# x=1087 on the 2024-10-17 launch week.  This fixes the grid phase for every
+# source.  The patch kinks fix the 7-day spacing; the polyline fit above is now
+# only an independent shape diagnostic, never an alternative date anchor.
+px_per_week=float(anchor_px_per_week)
+x_at_newage=float(azmoth_first_x-70*px_per_week)
+azmoth_x=float(x_at_newage+70*px_per_week)
+assert round(azmoth_x)==azmoth_first_x
 
 
 def month_coordinate(day):
@@ -58,7 +67,7 @@ grid=[]
 for date in pd.date_range('2022-12-29','2025-03-27',freq='7D'):
     w=(date-anchor_dates[0]).days//7
     grid.append(('250410','production_sources',date,
-                 float(x_at_newage+w*px_per_week),'patch_kinks_3_anchors'))
+                 float(x_at_newage+w*px_per_week),'azmoth_launch_first_pixel_plus_patch_week_spacing'))
 for i,date in enumerate(pd.date_range('2025-04-17',periods=25,freq='7D')):
     grid.append(('251016','production_sources',date,136.+49*i,
                  'first_last_week_and_line_vertices'))
@@ -112,6 +121,19 @@ for snap,chart,date,xf,grid_method in grid:
             rows.append(dict(snapshot=snap,chart=chart,date=str(date.date()),series=series,
                 x_float=xf,x_pixel=x,y_pixel=np.nan,status='not_observable',
                 color_distance=np.nan,grid_method=grid_method));continue
+        if snap=='250410' and series=='azmoth':
+            if x in azmoth.index:
+                observed=azmoth.loc[x]
+                rows.append(dict(snapshot=snap,chart=chart,date=str(date.date()),series=series,
+                    x_float=xf,x_pixel=x,y_pixel=int(observed.y_pixel),
+                    status='direct_weekly_rgb' if observed.status=='light_cyan_observed'
+                           else 'crossing_or_occluded_path',
+                    color_distance=float(observed.rgb_distance),grid_method=grid_method))
+            else:
+                rows.append(dict(snapshot=snap,chart=chart,date=str(date.date()),series=series,
+                    x_float=xf,x_pixel=x,y_pixel=np.nan,status='unresolved_outside_cyan_line',
+                    color_distance=np.nan,grid_method=grid_method))
+            continue
         if snap=='250410' and series=='other_coin' and date<pd.Timestamp('2024-02-22'):
             rows.append(dict(snapshot=snap,chart=chart,date=str(date.date()),series=series,
                 x_float=xf,x_pixel=x,y_pixel=np.nan,status='not_observable',
@@ -140,8 +162,6 @@ for snap,chart,date,xf,grid_method in grid:
             if distance<threshold:
                 y=int(lo+iy);status='direct_weekly_rgb'
             else:y=np.nan;distance=np.nan;status='unresolved_rgb'
-        if snap=='250410' and series=='azmoth' and status=='direct_weekly_rgb':
-            status='candidate_overlap_unverified'
         if series=='other' and status=='direct_weekly_rgb':
             status='candidate_axis_unverified'
         rows.append(dict(snapshot=snap,chart=chart,date=str(date.date()),series=series,
@@ -174,9 +194,9 @@ for (snap,chart),group in out.groupby(['snapshot','chart']):
     canvas=Image.open(S/images[(snap,chart)]).convert('RGB')
     draw=ImageDraw.Draw(canvas)
     for r in group.itertuples():
-        if r.status not in ('direct_weekly_rgb','candidate_overlap_unverified'):
+        if r.status not in ('direct_weekly_rgb','crossing_or_occluded_path'):
             continue
-        color='#ff00aa' if r.status=='candidate_overlap_unverified' else '#08b534'
+        color='#ff00aa' if r.series=='azmoth' else '#08b534'
         draw.ellipse((r.x_pixel-3,int(r.y_pixel)-3,r.x_pixel+3,int(r.y_pixel)+3),fill=color)
     canvas.save(O/f'{snap}_{chart}_WEEKLY_qa.png')
 
@@ -184,12 +204,15 @@ manifest=dict(weekly_axis_250410=dict(anchors=[
     dict(date=str(d.date()),x_pixel=float(x)) for d,x in zip(anchor_dates,anchor_x)],
     patch_only_fit_x_at_newage=float(anchor_x_at_newage),
     patch_only_fit_pixels_per_week=float(anchor_px_per_week),
-    weekly_vertex_fit_x_at_newage=float(x_at_newage),
-    weekly_vertex_fit_pixels_per_week=float(px_per_week),
+    unanchored_weekly_vertex_fit_x_at_newage=float(vertex_x_at_newage),
+    unanchored_weekly_vertex_fit_pixels_per_week=float(vertex_px_per_week),
     weekly_vertex_fit_loss=float(polyline_loss),
-    phase_refinement='minimum boss+field piecewise-linear residual; each patch kink within 3px',
-    independent_azmoth_check=dict(date='2024-10-17',predicted_x=azmoth_x,
-        visible_onset_approx_x=1086),
+    phase_anchor='first visible light-cyan Azmoth pixel x=1087 on 2024-10-17',
+    azmoth_launch_first_x=int(azmoth_first_x),
+    chosen_x_at_newage=float(x_at_newage),
+    chosen_pixels_per_week=float(px_per_week),
+    launch_anchor_check=dict(date='2024-10-17',chosen_x=azmoth_x,
+        directly_read_first_x=int(azmoth_first_x)),
     first_week='2022-12-29',last_week='2025-03-27',weeks=118,
     phase_sensitivity_definition='abs(y(x+3px)-y(x-3px)) from raster trace; diagnostic only',
     caveat='Kink positions have several-pixel uncertainty; calendar convention of weekly window is unprinted. Weekly x and date labels are approximate near steep steps.'),

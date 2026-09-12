@@ -1,0 +1,17 @@
+{
+  "source": "assets\\sources\\four_now_originals\\250410_생산처별장기추이.jpg",
+  "sha256": "50cbc06bd8e1249947b06418805ecfb223eba4225d60455573f092f7a1d96f97",
+  "color_palette": [
+    192.0,
+    217.0,
+    228.0
+  ],
+  "first_pixel_x": 1087,
+  "first_pixel_y": 755,
+  "launch_date": "2024-10-17",
+  "last_pixel_x": 1262,
+  "last_pixel_y": 717,
+  "observed_pixels": 176,
+  "occluded_pixels": 0,
+  "meaning": "first visible cyan x fixes nominal launch-week x; crossing paths carry separate status"
+}

@@ -1,0 +1,93 @@
+{
+  "method": "each original x column compared with chord between consecutive anchored Thursday points",
+  "tolerance_px": 3,
+  "clear_kink_threshold_px": 5,
+  "counts": [
+    {
+      "series": "azmoth",
+      "verdict": "REVIEW_3_TO_5PX",
+      "segments": 2
+    },
+    {
+      "series": "azmoth",
+      "verdict": "STRAIGHT_WITHIN_3PX",
+      "segments": 21
+    },
+    {
+      "series": "boss",
+      "verdict": "INTERIOR_KINK_GT5PX",
+      "segments": 19
+    },
+    {
+      "series": "boss",
+      "verdict": "REVIEW_3_TO_5PX",
+      "segments": 19
+    },
+    {
+      "series": "boss",
+      "verdict": "STRAIGHT_WITHIN_3PX",
+      "segments": 78
+    },
+    {
+      "series": "boss",
+      "verdict": "UNRESOLVED_COLUMNS",
+      "segments": 1
+    },
+    {
+      "series": "field",
+      "verdict": "INTERIOR_KINK_GT5PX",
+      "segments": 5
+    },
+    {
+      "series": "field",
+      "verdict": "REVIEW_3_TO_5PX",
+      "segments": 21
+    },
+    {
+      "series": "field",
+      "verdict": "STRAIGHT_WITHIN_3PX",
+      "segments": 91
+    },
+    {
+      "series": "other_coin",
+      "verdict": "INTERIOR_KINK_GT5PX",
+      "segments": 10
+    },
+    {
+      "series": "other_coin",
+      "verdict": "REVIEW_3_TO_5PX",
+      "segments": 10
+    },
+    {
+      "series": "other_coin",
+      "verdict": "STRAIGHT_WITHIN_3PX",
+      "segments": 36
+    }
+  ],
+  "uniform_grid_sensitivity": {
+    "first_x_range": [
+      1085,
+      1089
+    ],
+    "pixels_per_week_range": [
+      7.45,
+      7.75
+    ],
+    "best_boss_field_gt5px": 16,
+    "best_first_x": 1089,
+    "best_pixels_per_week": 7.659999999999996
+  },
+  "concrete_counterexample": {
+    "date_start": "2025-01-23",
+    "date_end": "2025-01-30",
+    "endpoint_x": [
+      1193,
+      1201
+    ],
+    "interior_kink_x": 1196,
+    "observed_interior_y": 364,
+    "chord_interior_y": 347.5,
+    "deviation_px": 16.5
+  },
+  "no_claim_of_perfect_straightness": true
+}

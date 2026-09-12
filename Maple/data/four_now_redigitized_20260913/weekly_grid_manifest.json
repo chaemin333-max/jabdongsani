@@ -16,14 +16,17 @@
     ],
     "patch_only_fit_x_at_newage": 553.8106379397409,
     "patch_only_fit_pixels_per_week": 7.597205857599737,
-    "weekly_vertex_fit_x_at_newage": 556.5,
-    "weekly_vertex_fit_pixels_per_week": 7.599999999999997,
+    "unanchored_weekly_vertex_fit_x_at_newage": 556.5,
+    "unanchored_weekly_vertex_fit_pixels_per_week": 7.599999999999997,
     "weekly_vertex_fit_loss": 5.360524079201905,
-    "phase_refinement": "minimum boss+field piecewise-linear residual; each patch kink within 3px",
-    "independent_azmoth_check": {
+    "phase_anchor": "first visible light-cyan Azmoth pixel x=1087 on 2024-10-17",
+    "azmoth_launch_first_x": 1087,
+    "chosen_x_at_newage": 555.1955899680185,
+    "chosen_pixels_per_week": 7.597205857599737,
+    "launch_anchor_check": {
       "date": "2024-10-17",
-      "predicted_x": 1088.4999999999998,
-      "visible_onset_approx_x": 1086
+      "chosen_x": 1087.0,
+      "directly_read_first_x": 1087
     },
     "first_week": "2022-12-29",
     "last_week": "2025-03-27",

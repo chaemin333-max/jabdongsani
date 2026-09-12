@@ -66,10 +66,19 @@ weekly_counts=weekly.groupby(['snapshot','chart']).date.nunique()
 assert weekly_counts.loc[('250410','production_sources')]==118
 assert weekly_counts.loc[('251016','production_sources')]==25
 assert weekly_counts.loc[('260910','production_sources')]==53
+cyan=weekly[(weekly.snapshot=='250410')&(weekly.series=='azmoth')&
+            (weekly.status=='direct_weekly_rgb')].sort_values('date')
+assert len(cyan)==24 and cyan.iloc[0].date=='2024-10-17' and cyan.iloc[0].x_pixel==1087
+straight=pd.read_csv(O/'250410_weekly_segment_straightness.csv')
+clear_kinks=straight[straight.verdict=='INTERIOR_KINK_GT5PX'].groupby('series').size().to_dict()
+assert clear_kinks.get('azmoth',0)==0 and clear_kinks.get('boss',0)>0
 receipt={'total_image_independent_reread_qa':total_qa,
          'boss_overlap_summary':summary,
          'boss_bar_counts':{s:int(len(g)) for s,g in bars.groupby('snapshot')},
          'weekly_line_chart_counts':{f'{s}/{c}':int(n) for (s,c),n in weekly_counts.items()},
+         'azmoth_launch_week':dict(first_date='2024-10-17',first_x=1087,observed_weeks=24),
+         'strict_uniform_segment_test':'FAIL; interior bends >5px remain on boss/field',
+         'clear_kink_counts_by_series':{k:int(v) for k,v in clear_kinks.items()},
          'scope':'raw source-image pixels and direct printed shares only',
          'no_new_total_estimate':True,
          'zero_policy':'unknown for line charts; never infer money from y pixels or fill unresolved components'}

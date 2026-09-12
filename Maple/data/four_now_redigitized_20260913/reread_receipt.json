@@ -55,6 +55,17 @@
     "251016/total_production": 145,
     "260910/production_sources": 53
   },
+  "azmoth_launch_week": {
+    "first_date": "2024-10-17",
+    "first_x": 1087,
+    "observed_weeks": 24
+  },
+  "strict_uniform_segment_test": "FAIL; interior bends >5px remain on boss/field",
+  "clear_kink_counts_by_series": {
+    "boss": 19,
+    "field": 5,
+    "other_coin": 10
+  },
   "scope": "raw source-image pixels and direct printed shares only",
   "no_new_total_estimate": true,
   "zero_policy": "unknown for line charts; never infer money from y pixels or fill unresolved components"

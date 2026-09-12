@@ -1,0 +1,15 @@
+{
+  "interpretation": "diagnostic only; launch x=1087 fixed; each other week allowed ±3px",
+  "shifted_weeks": 58,
+  "max_shift_px": 3,
+  "count_gt5px": {
+    "azmoth": 0,
+    "boss": 11,
+    "field": 2
+  },
+  "count_segments": {
+    "azmoth": 22,
+    "boss": 115,
+    "field": 116
+  }
+}
