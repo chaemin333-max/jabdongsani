@@ -1,0 +1,26 @@
+{
+  "250410": {
+    "image": "250410 \ubcf4\uc2a4\uad6c\uac04\ubcc4.png",
+    "detected_centers": 104,
+    "output_rows": 104,
+    "first_x": 135,
+    "last_x": 951,
+    "source_sha256": "2a4ae14cc6847901a1b8a2e5c95ea75d68f7ac6ef4932931a8458eae14609fe7"
+  },
+  "251016": {
+    "image": "251016_\ubcf4\uc2a4\uad6c\uac04\ubcc4.png",
+    "detected_centers": 132,
+    "output_rows": 132,
+    "first_x": 127,
+    "last_x": 1147,
+    "source_sha256": "20f3784f77b2d2a5f318bc6c842c6ed6e3d5bb2f1090b95c693a121ee2e890c9"
+  },
+  "260910": {
+    "image": "260910_\ubcf4\uc2a4\uad6c\uac04\ubcc4\uc0dd\uc0b0.png",
+    "detected_centers": 105,
+    "output_rows": 105,
+    "first_x": 141,
+    "last_x": 812,
+    "source_sha256": "73cdbfd94d31c98c6d6847ca703d47806042a2145bd598cb5043056bffdcc2e1"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "231116/boss_tier_lines": {
+    "image": "231116_보스구간별생산.png",
+    "image_sha256": "aea14f5c27b4159cd2cabe1872fb88eec28296dced599475842bce771bbeab9a",
+    "image_size": [
+      2707,
+      1542
+    ],
+    "x_count": 397
+  },
+  "250410/production_sources": {
+    "image": "250410_생산처별장기추이.jpg",
+    "image_sha256": "50cbc06bd8e1249947b06418805ecfb223eba4225d60455573f092f7a1d96f97",
+    "image_size": [
+      2340,
+      1080
+    ],
+    "x_count": 299
+  },
+  "251016/production_sources": {
+    "image": "251016_생산처별.png",
+    "image_sha256": "08aa103d8bb370bb923a0e27206a6bcee9c1c403fbd09d1bd7be74124200618f",
+    "image_size": [
+      1780,
+      1002
+    ],
+    "x_count": 393
+  },
+  "260910/production_sources": {
+    "image": "260910_생산처별.png",
+    "image_sha256": "c6f9f8c258f4fb2137e8572eac00beab9ebc1030859918e08998c46d5374bf9b",
+    "image_size": [
+      1755,
+      991
+    ],
+    "x_count": 313
+  },
+  "251016/total_production": {
+    "image": "251016_총생산.png",
+    "image_sha256": "6169da94832ecb68d3c7f43f2ef38ceeef8c8c87f039154bbe0e7cbf1de7debd",
+    "image_size": [
+      1782,
+      1000
+    ],
+    "x_count": 616
+  }
+}

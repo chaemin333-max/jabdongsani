@@ -1,0 +1,54 @@
+{
+  "total_image_independent_reread_qa": {
+    "matched_pixels": 614,
+    "mean_abs_y_difference_px": 0.7687296416938111,
+    "p95_abs_y_difference_px": 2.0,
+    "max_abs_y_difference_px": 28.0
+  },
+  "boss_overlap_summary": [
+    {
+      "snapshot_a": "250410",
+      "snapshot_b": "251016",
+      "measure": "all_boss_stacks",
+      "overlap_weeks": 104,
+      "median_factor_b_per_a": 0.6842105263157895,
+      "median_abs_difference_pct": 5.024038461538455,
+      "p90_abs_difference_pct": 11.471203215389261
+    },
+    {
+      "snapshot_a": "251016",
+      "snapshot_b": "260910",
+      "measure": "all_boss_stacks",
+      "overlap_weeks": 59,
+      "median_factor_b_per_a": 0.3020833333333333,
+      "median_abs_difference_pct": 0.5475802871096502,
+      "p90_abs_difference_pct": 1.377759485591914
+    },
+    {
+      "snapshot_a": "250410",
+      "snapshot_b": "251016",
+      "measure": "hard_suu_to_blackmage_vs_hard_damien_to_jinhilla_proxy",
+      "overlap_weeks": 79,
+      "median_factor_b_per_a": 0.684931506849315,
+      "median_abs_difference_pct": 4.057142857142848,
+      "p90_abs_difference_pct": 13.381949934123854
+    },
+    {
+      "snapshot_a": "251016",
+      "snapshot_b": "260910",
+      "measure": "hard_damien_to_jinhilla_vs_hard_suu_to_jinhilla_proxy",
+      "overlap_weeks": 32,
+      "median_factor_b_per_a": 0.30560796645702304,
+      "median_abs_difference_pct": 0.9818670969206134,
+      "p90_abs_difference_pct": 1.8060625008536886
+    }
+  ],
+  "boss_bar_counts": {
+    "250410": 104,
+    "251016": 132,
+    "260910": 105
+  },
+  "scope": "raw source-image pixels and direct printed shares only",
+  "no_new_total_estimate": true,
+  "zero_policy": "unknown for line charts; never infer money from y pixels or fill unresolved components"
+}
