@@ -1,0 +1,12 @@
+{
+  "status": "CONDITIONAL_FIELD_SHARE_AND_PRELEAP_EXCESS",
+  "share_method": "field height divided by sum of source heights; multiply canonical total",
+  "latest_priority": "260910; 251016 fallback when latest unresolved",
+  "pixel_sensitivity": "+/-2px; unresolved other 0..3; dark coin 0..20; postJan15 light coin 0..15px; midpoint is an assumption, not confidence intervals",
+  "interpolation": "isolated interior field gap only",
+  "S1": "opening outside image coverage",
+  "no_postleap_extrapolation": true,
+  "overlap_weeks": 5,
+  "overlap_median_abs_pct": 5.77527546544162,
+  "checks_passed": 5
+}
