@@ -1,0 +1,13 @@
+snapshot,category,independent_original,stored_numeric,coverage,status,principal_method,material_limitation
+231116,total_production,no,no,none,NOT_DIGITIZED,stock image exists instead,available stock is not production
+231116,production_sources,yes,yes,2023-04 to 2023-11 eight monthly printed compositions,PRINTED_PARTIAL,manual transcription of boss field Ursus percentages,major-source composition only and November partial window unclear
+231116,boss_tiers,yes,partial,223 x-pixel samples of one dark-blue group line,PARTIAL_LINE_TRACE,RGB extraction of Hard Damien to Hard Jin Hilla,other lines not digitized and no common y-zero; Hard Suu placement is user crosswalk
+250410,total_production,no,derived,2022-12 to 2025-03 source-line sum,UNIDENTIFIED_DERIVATION,sum five digitized line heights,common zero and cross-series scale unverified; Azmoth line overlaps another
+250410,production_sources,yes,partial,299 x samples around three-pixel spacing,REQUIRES_REDIGITIZATION,six printed month ticks plus fixed y=826 and RGB trace,light-cyan Azmoth overlap misread; timestamps are interpolated not observed weekly vertices
+250410,boss_tiers,yes,partial,80 selected bars of approximately 104,PARTIAL_PIXELS,four-color stacked bar boundary extraction,missed bars and wider Hard Suu through Black Mage category
+251016,total_production,yes,yes,original image through 2025-10; composite JSON reaches 2026-08,SHAPE_CHECKED_PROVENANCE_OPEN,1664 recovered coordinate values with fixed later normalization,JSON source_data missing; full-fit affine source-image MAPE 1.31% is not OOS
+251016,production_sources,yes,partial,25 weekly dates x five lines; two component gaps,CONDITIONAL_PIXELS,uniform x=136+49i and y=757 color/ROI method,dark-coin blue-minus-red scoring can conflate overlapping lines; denominator not validated
+251016,boss_tiers,yes,yes,132 weekly stacked bars x six categories,PIXEL_RECONSTRUCTION,ordered-color stack_profile at y=757,aggregate scale cross-check uses 16 calibration weeks and 43 holdout weeks; taxonomy differs
+260910,total_production,no,no,none,NOT_INDEPENDENTLY_DIGITIZED,earlier canonical total carried forward,no separate official total curve in three supplied 260910 slides
+260910,production_sources,yes,partial,53 weekly dates x five lines; 87/265 unresolved or below resolution,CONDITIONAL_PIXELS,y=714 ROI color detection and boss-tied common scale,all 53 other-source rows below resolution; source boss shape differs from weekly boss bars
+260910,boss_tiers,yes,yes,105 weekly stacked bars x seven categories,PIXELS_WITH_CONSTRAINTS,ordered color extraction and six official rate endpoints,scale is median ratio to earlier canonical boss; fitted official endpoint rates are not independent validation
