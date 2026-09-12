@@ -1,0 +1,6 @@
+source_url,condition,item_drop_pct,kills,fragments,session_minutes,session_count,mean_fragments_per_session,scope,use
+https://www.inven.co.kr/board/maple/2304/46985,initial_zero_drop,0,28375,20,,,,world_unspecified,mechanism_only_not_population
+https://www.inven.co.kr/board/maple/2304/46985,drop196,196,131857,111,,,,world_unspecified,mechanism_only_not_population
+https://www.inven.co.kr/board/maple/5746/251724,full_drop,239,,,30,60,8.57,author_profile_reboot,mechanism_only_not_population
+https://www.inven.co.kr/board/maple/5746/251724,full_drop_potion,259,,,30,60,8.75,author_profile_reboot,mechanism_only_not_population
+https://www.inven.co.kr/board/maple/5746/251724,full_drop_potion_union,309,,,30,60,10.28,author_profile_reboot,mechanism_only_not_population
