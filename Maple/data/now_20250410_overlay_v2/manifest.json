@@ -44,5 +44,6 @@
       "MAPE_pct": 0.9043510260671079,
       "median_bias_pct": 0.0
     }
-  ]
+  ],
+  "revision": "v2 excludes boss-edge false field detections; light coin follows manually observed image-only guide; no canonical curve fitting"
 }
