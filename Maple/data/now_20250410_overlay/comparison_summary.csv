@@ -1,0 +1,4 @@
+window,n_pixels,MAPE_pct,median_bias_pct
+earlier_comparison,168,9.274991989260952,-7.872088938369437
+forward_holdout,98,8.533799126667606,7.596643808394921
+scale_calibration,33,0.9043510260671079,0.0
