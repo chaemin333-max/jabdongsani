@@ -1,0 +1,3 @@
+window_label,start,end,window_days,boss_pct,field_pct,coin_other_pct,coin_azmoth_pct,other_pct,date_basis,source
+September_update_11days,2024-09-12,2024-09-22,11,67.5,24.3,7.1,0,1.1,September_dates_inferred_from_update752_and_notice_11days,https://maplestory.nexon.com/News/Notice/All/145383
+October_update_11days,2024-10-17,2024-10-27,11,61.1,19.8,6.3,12.0,0.8,October_dates_explicit_in_corrected_notice,https://maplestory.nexon.com/News/Notice/All/145383
