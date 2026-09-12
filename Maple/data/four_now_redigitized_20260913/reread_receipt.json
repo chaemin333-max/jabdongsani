@@ -48,6 +48,13 @@
     "251016": 132,
     "260910": 105
   },
+  "weekly_line_chart_counts": {
+    "231116/boss_tier_lines": 30,
+    "250410/production_sources": 118,
+    "251016/production_sources": 25,
+    "251016/total_production": 145,
+    "260910/production_sources": 53
+  },
   "scope": "raw source-image pixels and direct printed shares only",
   "no_new_total_estimate": true,
   "zero_policy": "unknown for line charts; never infer money from y pixels or fill unresolved components"

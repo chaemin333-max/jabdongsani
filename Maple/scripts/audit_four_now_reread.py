@@ -8,7 +8,8 @@ import pandas as pd
 R=Path(__file__).resolve().parents[1]
 O=R/'data/four_now_redigitized_20260913'
 bars=pd.read_csv(O/'boss_bars_all.csv',dtype={'snapshot':str})
-lines=pd.read_csv(O/'line_pixels_all.csv',dtype={'snapshot':str})
+lines=pd.read_csv(O/'raster_trace_nonweekly.csv',dtype={'snapshot':str})
+weekly=pd.read_csv(O/'weekly_line_pixels_all.csv',dtype={'snapshot':str})
 
 # The slide itself prints eight monthly shares.  These are transcribed values,
 # not estimates from bar heights; rounding leaves some rows at 99.9%.
@@ -60,10 +61,15 @@ total_qa=dict(matched_pixels=len(j),mean_abs_y_difference_px=float(abs(delta).me
 # RGB hit counts include only raw observations.  Ambiguous/axis candidates
 # remain explicitly separate and must not be used in a sum of sources.
 coverage=lines.groupby(['snapshot','chart','series','status']).size().rename('count').reset_index()
-coverage.to_csv(O/'line_read_status.csv',index=False)
+coverage.to_csv(O/'raster_trace_status.csv',index=False)
+weekly_counts=weekly.groupby(['snapshot','chart']).date.nunique()
+assert weekly_counts.loc[('250410','production_sources')]==118
+assert weekly_counts.loc[('251016','production_sources')]==25
+assert weekly_counts.loc[('260910','production_sources')]==53
 receipt={'total_image_independent_reread_qa':total_qa,
          'boss_overlap_summary':summary,
          'boss_bar_counts':{s:int(len(g)) for s,g in bars.groupby('snapshot')},
+         'weekly_line_chart_counts':{f'{s}/{c}':int(n) for (s,c),n in weekly_counts.items()},
          'scope':'raw source-image pixels and direct printed shares only',
          'no_new_total_estimate':True,
          'zero_policy':'unknown for line charts; never infer money from y pixels or fill unresolved components'}

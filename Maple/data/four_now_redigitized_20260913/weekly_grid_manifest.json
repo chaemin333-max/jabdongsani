@@ -1,0 +1,56 @@
+{
+  "weekly_axis_250410": {
+    "anchors": [
+      {
+        "date": "2023-06-15",
+        "x_pixel": 554.0
+      },
+      {
+        "date": "2023-07-13",
+        "x_pixel": 584.0
+      },
+      {
+        "date": "2024-12-19",
+        "x_pixel": 1154.0
+      }
+    ],
+    "patch_only_fit_x_at_newage": 553.8106379397409,
+    "patch_only_fit_pixels_per_week": 7.597205857599737,
+    "weekly_vertex_fit_x_at_newage": 556.5,
+    "weekly_vertex_fit_pixels_per_week": 7.599999999999997,
+    "weekly_vertex_fit_loss": 5.360524079201905,
+    "phase_refinement": "minimum boss+field piecewise-linear residual; each patch kink within 3px",
+    "independent_azmoth_check": {
+      "date": "2024-10-17",
+      "predicted_x": 1088.4999999999998,
+      "visible_onset_approx_x": 1086
+    },
+    "first_week": "2022-12-29",
+    "last_week": "2025-03-27",
+    "weeks": 118,
+    "phase_sensitivity_definition": "abs(y(x+3px)-y(x-3px)) from raster trace; diagnostic only",
+    "caveat": "Kink positions have several-pixel uncertainty; calendar convention of weekly window is unprinted. Weekly x and date labels are approximate near steep steps."
+  },
+  "charts": {
+    "231116/boss_tier_lines": {
+      "weeks": 30,
+      "series": 5
+    },
+    "250410/production_sources": {
+      "weeks": 118,
+      "series": 5
+    },
+    "251016/production_sources": {
+      "weeks": 25,
+      "series": 5
+    },
+    "251016/total_production": {
+      "weeks": 145,
+      "series": 1
+    },
+    "260910/production_sources": {
+      "weeks": 53,
+      "series": 5
+    }
+  }
+}

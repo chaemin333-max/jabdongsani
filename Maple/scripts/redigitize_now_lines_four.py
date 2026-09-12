@@ -135,10 +135,10 @@ data.loc[ambiguous, 'status'] = 'candidate_overlap_unverified'
 ambiguous = ((data.snapshot.isin(['251016','260910'])) &
              (data.series == 'other') & (data.status == 'rgb_observed'))
 data.loc[ambiguous, 'status'] = 'candidate_axis_unverified'
-data.to_csv(OUT/'line_pixels_all.csv',index=False)
+data.to_csv(OUT/'raster_trace_nonweekly.csv',index=False)
 counts = data.groupby(['snapshot','chart','series','status']).size().rename('n').reset_index()
-counts.to_csv(OUT/'line_read_status.csv',index=False)
-(OUT/'line_manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding='utf-8')
+counts.to_csv(OUT/'raster_trace_status.csv',index=False)
+(OUT/'raster_trace_manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding='utf-8')
 qa_colors = {
     'boss':'#00ef22', 'field':'#1818ff', 'azmoth':'#ed00ed',
     'azmoth_coin':'#ed00ed', 'other_coin':'#00dada',
