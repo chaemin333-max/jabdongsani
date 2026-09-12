@@ -1,0 +1,5 @@
+method,period,n,RMSE_fixed_model_pixels,median_bias_fixed_model_pixels
+source_sum,all_post,22,26.889215070625923,29.341152860483135
+source_sum,post_excluding_month_1_2_weeks,16,26.02600768012508,29.341152860483135
+ratio_free_origin,all_post,22,28.238772856774126,23.24148350561194
+ratio_free_origin,post_excluding_month_1_2_weeks,16,30.302377586169115,26.013838255435815

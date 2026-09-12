@@ -1,0 +1,11 @@
+source_date_shift_days,rule,n,change_corr
+-2,all,71,0.092992699151169
+-2,exclude_week_containing_1_or_2,37,0.540267042332739
+-1,all,71,0.1054805338495527
+-1,exclude_week_containing_1_or_2,37,0.5468059050041184
+0,all,71,0.12409543696922126
+0,exclude_week_containing_1_or_2,37,0.5609165255880628
+1,all,71,0.18726127492808026
+1,exclude_week_containing_1_or_2,37,0.5955686618420104
+2,all,71,0.2448830149579105
+2,exclude_week_containing_1_or_2,37,0.6316327097675218
