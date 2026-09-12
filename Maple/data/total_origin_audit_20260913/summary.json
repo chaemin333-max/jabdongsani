@@ -1,0 +1,38 @@
+{
+  "canonical_sha256": "63e41f7c7d5c384971524a56df0dcc01a25fd888f808e9174b3195feb9dd6b41",
+  "total_image_size": [
+    1782,
+    1000
+  ],
+  "source_fit_a": 1.4861963846487654,
+  "source_fit_b": 1156.8296565661342,
+  "implied_source_zero_y": 778.3827685999446,
+  "source_fit_RMSE": 4.61197106568833,
+  "source_fit_MAPE_pct": 1.307887630311768,
+  "april_calibration_affine_slope": 0.43550364463809726,
+  "april_calibration_affine_intercept": 10.221084971748867,
+  "april_effective_zero_if_five_components": 830.6939147800899,
+  "metrics": [
+    {
+      "window": "calibration",
+      "method": "affine_diagnostic",
+      "MAPE_pct": 0.8749441597491322
+    },
+    {
+      "window": "calibration",
+      "method": "same_window_scalar",
+      "MAPE_pct": 0.9043510260671079
+    },
+    {
+      "window": "post_NEXT",
+      "method": "affine_diagnostic",
+      "MAPE_pct": 12.921110150043225
+    },
+    {
+      "window": "post_NEXT",
+      "method": "same_window_scalar",
+      "MAPE_pct": 16.286422316085687
+    }
+  ],
+  "warning": "Post-result affine sensitivity; no new OOS claim; total image has no visible zero tick; this does not establish true zero."
+}
