@@ -2,6 +2,8 @@
 
 이 폴더는 스포츠/이스포츠 멀티레그 베팅의 데이터 수집, 엣지 측정, 프로모션 반영, Kelly sizing을 일관되게 기록하기 위한 정본 노트다.
 
+> Round별 실제 체결·결과 기록은 `G/ROUND_LEDGER.md`를 정본으로 사용한다. 실행 규칙은 `G/ROUND_RULES.md`를 따른다.
+
 ## 1. 기본 원칙
 
 이 시스템의 목표는 단순 적중률이 아니라 다음 네 요소를 분리해서 측정하는 것이다.
@@ -406,38 +408,16 @@ Economic-capital break-even:
 ### Result
 
 ```text
-Final score: SF 27 - 7 LAR
-SF +3.5: WIN
-U48.5: WIN
-Parlay: WIN
-Payout: 384,180 KRW
+Final: SF 26 – 21 LAR
+Ticket result: WIN
+Potential payout realized: 384,180 KRW
 ```
-
-Fresh cash 기준 순증:
-
-```text
-384,180 - 100,000 = +284,180 KRW
-```
-
-단, `n=1`이므로 이 결과 자체는 edge의 증거가 아니다. #001은 데이터 포맷과 계산법의 benchmark로만 사용한다.
 
 ---
 
-## 13. Recommended workflow
+## 13. Round-recording rule
 
-각 후보 bet마다 다음 순서로 평가한다.
-
-```text
-1. 각 leg odds 기록
-2. naive product 계산
-3. correlation family tag
-4. bookmaker parlay odds 비교
-5. promo state 확인
-6. fresh-cash / economic effective odds 계산
-7. conservative true p 추정
-8. EV 계산
-9. Kelly 또는 portfolio Kelly sizing
-10. 결과 및 closing odds 기록
-```
-
-데이터가 충분히 쌓이면 단순 승률표가 아니라 전략 family별 calibration, Bayesian shrinkage, out-of-sample test, portfolio Kelly simulation으로 확장한다.
+- 실제 체결된 모든 Round는 `G/ROUND_LEDGER.md`에 즉시 기록한다.
+- 결과 확정 후 같은 Round에 `Result`, `Realized payout`, `Cashback`, `Next promo state`를 업데이트한다.
+- 과거 Round의 누락값은 추측하지 않고 `UNKNOWN`으로 둔다.
+- **1-leg value 비교 시 표시 decimal odds에서 0.10을 차감한 값을 평가배당으로 사용한다.**
