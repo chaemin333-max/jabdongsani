@@ -52,3 +52,42 @@ combined odds       = 4.43
 potential payout    = 102,000 * 4.43 = 451,860
 loss cashback       = 102,000 * 0.02 = 2,040 points
 ```
+
+## Round 6
+
+| Field | Value |
+|---|---|
+| Round | 6 |
+| Date | 2026-09-18 KST |
+| Sport | MLB |
+| Market timing | Pregame |
+| Total effective stake | 111,000 KRW |
+| Ticket A stake | 56,000 KRW |
+| Ticket A legs | Boston Red Sox ML × New York Mets ML |
+| Ticket A combined odds | 3.33 |
+| Ticket A potential payout | 186,480 KRW |
+| Ticket B stake | 55,000 KRW |
+| Ticket B legs | Minnesota Twins ML × Chicago White Sox ML |
+| Ticket B combined odds | 3.63 |
+| Ticket B potential payout | 199,650 KRW |
+| Maximum combined payout | 386,130 KRW |
+| Cash deposit | UNKNOWN |
+| Promo state | `S1_AFTER_LOSS_5` (carried forward from Round 5; exact funding composition UNKNOWN) |
+| Bonus rate | UNKNOWN |
+| Bonus amount | UNKNOWN |
+| Existing points used | UNKNOWN |
+| Result | PENDING |
+| Realized payout | PENDING |
+| Loss cashback | PENDING |
+| Next promo state | PENDING |
+| Notes | User confirmed both tickets locked in. Ticket odds recorded at lock: A 3.33, B 3.63. Tickets use four distinct MLB games with no shared leg. |
+
+## Round 6 arithmetic
+
+```text
+Ticket A: 56,000 * 3.33 = 186,480 KRW
+Ticket B: 55,000 * 3.63 = 199,650 KRW
+Total stake                 = 111,000 KRW
+Maximum combined payout     = 386,130 KRW
+Maximum combined net profit = 275,130 KRW
+```
