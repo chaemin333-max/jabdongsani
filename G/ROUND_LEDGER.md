@@ -91,3 +91,42 @@ Total stake                 = 111,000 KRW
 Maximum combined payout     = 386,130 KRW
 Maximum combined net profit = 275,130 KRW
 ```
+
+
+## Round 7
+
+| Field | Value |
+|---|---|
+| Round | 7 |
+| Date | 2026-09-18 KST |
+| Sport | NFL |
+| Market timing | Pregame |
+| Game | Detroit Lions @ Buffalo Bills |
+| Legs | 2 |
+| Leg 1 | Buffalo Bills -5.5 @ 1.92 |
+| Leg 2 | Over 54.5 @ 1.88 |
+| Offered combined odds | 3.61 |
+| Cash budget | 120,000 KRW |
+| Promo state | `S1_AFTER_LOSS_5` |
+| Bonus rate | 5% |
+| Bonus amount | 6,000 KRW |
+| Existing points used | 2,000 KRW |
+| Effective stake | 128,000 KRW |
+| Potential payout | 462,080 KRW |
+| Result | PENDING |
+| Realized payout | PENDING |
+| Loss cashback | PENDING |
+| Next promo state | PENDING |
+| Notes | User confirmed Round 7 locked in as Bills -5.5 × Over 54.5 at combined odds 3.61. |
+
+## Round 7 arithmetic
+
+```text
+cash budget          = 120,000 KRW
+5% bonus             =   6,000 KRW
+existing points      =   2,000 KRW
+effective stake      = 128,000 KRW
+combined odds        = 3.61
+potential payout     = 128,000 * 3.61 = 462,080 KRW
+potential net profit = 462,080 - 120,000 = 342,080 KRW versus fresh cash budget
+```
