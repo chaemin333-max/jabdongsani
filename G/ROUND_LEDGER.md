@@ -76,11 +76,12 @@ loss cashback       = 102,000 * 0.02 = 2,040 points
 | Bonus rate | UNKNOWN |
 | Bonus amount | UNKNOWN |
 | Existing points used | UNKNOWN |
-| Result | PENDING |
-| Realized payout | PENDING |
-| Loss cashback | PENDING |
-| Next promo state | PENDING |
-| Notes | User confirmed both tickets locked in. Ticket odds recorded at lock: A 3.33, B 3.63. Tickets use four distinct MLB games with no shared leg. |
+| Result | L (both tickets lost) |
+| Result detail | Ticket A: BOS beat TEX 4-3, but NYM lost 0-3 to PHI. Ticket B: CWS beat DET 3-1, but MIN lost 4-5 to LAA. |
+| Realized payout | 0 KRW |
+| Loss cashback | 2,220 points (= 2% of 111,000 KRW total stake) |
+| Next promo state | `S1_AFTER_LOSS_5` |
+| Notes | Ticket A @ 3.33 and Ticket B @ 3.63 both lost by one leg. Four-game no-shared-leg structure was preserved. |
 
 ## Round 6 arithmetic
 
@@ -90,6 +91,8 @@ Ticket B: 55,000 * 3.63 = 199,650 KRW
 Total stake                 = 111,000 KRW
 Maximum combined payout     = 386,130 KRW
 Maximum combined net profit = 275,130 KRW
+realized payout              = 0 KRW
+loss cashback                = 111,000 * 0.02 = 2,220 points
 ```
 
 
@@ -113,11 +116,12 @@ Maximum combined net profit = 275,130 KRW
 | Existing points used | 2,000 KRW |
 | Effective stake | 128,000 KRW |
 | Potential payout | 462,080 KRW |
-| Result | PENDING |
-| Realized payout | PENDING |
-| Loss cashback | PENDING |
-| Next promo state | PENDING |
-| Notes | User confirmed Round 7 locked in as Bills -5.5 × Over 54.5 at combined odds 3.61. |
+| Result | W |
+| Result detail | Buffalo Bills beat Detroit Lions 41-31. Bills -5.5 covered by 4.5 points beyond the spread; game total 72 cleared Over 54.5 by 17.5 points. |
+| Realized payout | 462,080 KRW |
+| Loss cashback | 0 |
+| Next promo state | `S2_NO_BONUS_BALANCE` |
+| Notes | User confirmed Round 7 locked in as Bills -5.5 × Over 54.5 at combined odds 3.61. Both legs won. |
 
 ## Round 7 arithmetic
 
@@ -129,4 +133,6 @@ effective stake      = 128,000 KRW
 combined odds        = 3.61
 potential payout     = 128,000 * 3.61 = 462,080 KRW
 potential net profit = 462,080 - 120,000 = 342,080 KRW versus fresh cash budget
+profit vs effective stake = 462,080 - 128,000 = 334,080 KRW
+final score           = BUF 41 - 31 DET
 ```
