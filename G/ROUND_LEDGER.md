@@ -136,3 +136,55 @@ potential net profit = 462,080 - 120,000 = 342,080 KRW versus fresh cash budget
 profit vs effective stake = 462,080 - 128,000 = 334,080 KRW
 final score           = BUF 41 - 31 DET
 ```
+
+
+## Round 8
+
+| Field | Value |
+|---|---|
+| Round | 8 |
+| Date | 2026-09-20 KST |
+| Sport | MLB |
+| Market timing | Pregame |
+| Available cash budget | 120,000 KRW |
+| Bonus rate | 10% |
+| Bonus amount | 12,000 KRW |
+| Existing points available | 4,000 KRW |
+| Total effective bankroll available | 136,000 KRW |
+| Ticket A stake | 50,000 KRW |
+| Ticket A legs | CLE–ATH Over 7.5 × TOR–TEX Over 7.5 × MIL–BAL Over 7.5 |
+| Ticket A structure | 3-leg parlay |
+| Ticket A odds promotion | 3% total-odds bonus (user-stated) |
+| Ticket A locked combined odds | 6.92 |
+| Ticket A potential payout | 346,000 KRW |
+| Ticket B stake | 64,080 KRW |
+| Ticket B legs | CWS–DET Over 8 × CHC–CIN Over 9 |
+| Ticket B structure | 2-leg parlay |
+| Ticket B locked combined odds | 3.55 |
+| Ticket B potential payout | 227,484 KRW |
+| Total staked | 114,080 KRW |
+| Effective bankroll left unbet | 21,920 KRW |
+| Maximum combined payout | 573,484 KRW |
+| Maximum net profit vs amount staked | 459,404 KRW |
+| Promo state | 10% bonus active (exact canonical state label UNKNOWN) |
+| Result | PENDING |
+| Realized payout | PENDING |
+| Loss cashback | PENDING |
+| Next promo state | PENDING |
+| Notes | User confirmed both tickets locked. Ticket A locked at 6.92 and receives a user-stated 3% total-odds bonus for being a 3-leg parlay. Do not reconstruct the pre-boost price from earlier quoted component odds; the locked combined price is canonical. |
+
+## Round 8 arithmetic
+
+```text
+cash budget                    = 120,000 KRW
+10% bonus                      =  12,000 KRW
+existing points                =   4,000 KRW
+effective bankroll available   = 136,000 KRW
+
+Ticket A: 50,000 * 6.92        = 346,000 KRW
+Ticket B: 64,080 * 3.55        = 227,484 KRW
+total staked                   = 114,080 KRW
+effective bankroll left unbet  =  21,920 KRW
+maximum combined payout        = 573,484 KRW
+maximum net profit vs stake    = 459,404 KRW
+```
