@@ -146,15 +146,15 @@ final score           = BUF 41 - 31 DET
 | Date | 2026-09-20 KST |
 | Sport | MLB |
 | Market timing | Pregame |
-| Available cash budget | 120,000 KRW |
+| Actual fresh cash input | 100,000 KRW |
 | Bonus rate | 10% |
-| Bonus amount | 12,000 KRW |
+| Bonus amount | 10,000 KRW |
 | Existing points available | 4,000 KRW |
-| Total effective bankroll available | 136,000 KRW |
+| Known funded amount (cash + 10% bonus + points) | 114,000 KRW |
 | Ticket A stake | 50,000 KRW |
 | Ticket A legs | CLE–ATH Over 7.5 × TOR–TEX Over 7.5 × MIL–BAL Over 7.5 |
 | Ticket A structure | 3-leg parlay |
-| Ticket A odds promotion | 3% total-odds bonus (user-stated) |
+| Ticket A odds promotion | 3% total-odds bonus (fixed project rule for all 3-leg parlays) |
 | Ticket A locked combined odds | 6.92 |
 | Ticket A potential payout | 346,000 KRW |
 | Ticket B stake | 64,080 KRW |
@@ -163,28 +163,28 @@ final score           = BUF 41 - 31 DET
 | Ticket B locked combined odds | 3.55 |
 | Ticket B potential payout | 227,484 KRW |
 | Total staked | 114,080 KRW |
-| Effective bankroll left unbet | 21,920 KRW |
+| Funding reconciliation | Ticket stakes total 114,080 KRW, which is 80 KRW above the explicitly identified 114,000 KRW funding; source of 80 KRW is UNKNOWN |
 | Maximum combined payout | 573,484 KRW |
 | Maximum net profit vs amount staked | 459,404 KRW |
-| Promo state | 10% bonus active (exact canonical state label UNKNOWN) |
+| Promo state | 10% deposit bonus active (exact canonical state label UNKNOWN) |
 | Result | PENDING |
 | Realized payout | PENDING |
 | Loss cashback | PENDING |
 | Next promo state | PENDING |
-| Notes | User confirmed both tickets locked. Ticket A locked at 6.92 and receives a user-stated 3% total-odds bonus for being a 3-leg parlay. Do not reconstruct the pre-boost price from earlier quoted component odds; the locked combined price is canonical. |
+| Notes | User corrected actual fresh cash input to 100,000 KRW. Ticket A locked at 6.92; the 3% total-odds bonus for 3-leg parlays is a fixed project rule. Ticket B stake remains 64,080 KRW as explicitly locked. The resulting 80 KRW funding difference is left UNKNOWN rather than inferred. |
 
 ## Round 8 arithmetic
 
 ```text
-cash budget                    = 120,000 KRW
-10% bonus                      =  12,000 KRW
+fresh cash input               = 100,000 KRW
+10% bonus                      =  10,000 KRW
 existing points                =   4,000 KRW
-effective bankroll available   = 136,000 KRW
+known funded amount            = 114,000 KRW
 
 Ticket A: 50,000 * 6.92        = 346,000 KRW
 Ticket B: 64,080 * 3.55        = 227,484 KRW
 total staked                   = 114,080 KRW
-effective bankroll left unbet  =  21,920 KRW
+unreconciled funding difference=      80 KRW (UNKNOWN source)
 maximum combined payout        = 573,484 KRW
 maximum net profit vs stake    = 459,404 KRW
 ```
