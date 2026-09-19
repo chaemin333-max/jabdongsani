@@ -163,7 +163,7 @@ final score           = BUF 41 - 31 DET
 | Ticket B locked combined odds | 3.55 |
 | Ticket B potential payout | 227,484 KRW |
 | Total staked | 114,080 KRW |
-| Funding reconciliation | Ticket stakes total 114,080 KRW, which is 80 KRW above the explicitly identified 114,000 KRW funding; source of 80 KRW is UNKNOWN |
+| Funding reconciliation | Ticket stakes total 114,080 KRW = 100,000 KRW fresh cash + 10,000 KRW bonus + 4,000 KRW existing points + 80 KRW residual balance remaining after the previous cash-out |
 | Maximum combined payout | 573,484 KRW |
 | Maximum net profit vs amount staked | 459,404 KRW |
 | Promo state | 10% deposit bonus active (exact canonical state label UNKNOWN) |
@@ -171,7 +171,7 @@ final score           = BUF 41 - 31 DET
 | Realized payout | PENDING |
 | Loss cashback | PENDING |
 | Next promo state | PENDING |
-| Notes | User corrected actual fresh cash input to 100,000 KRW. Ticket A locked at 6.92; the 3% total-odds bonus for 3-leg parlays is a fixed project rule. Ticket B stake remains 64,080 KRW as explicitly locked. The resulting 80 KRW funding difference is left UNKNOWN rather than inferred. |
+| Notes | User corrected actual fresh cash input to 100,000 KRW. Ticket A locked at 6.92; the 3% total-odds bonus for 3-leg parlays is a fixed project rule. Ticket B stake remains 64,080 KRW as explicitly locked. The extra 80 KRW came from residual balance left after the previous cash-out. |
 
 ## Round 8 arithmetic
 
@@ -184,7 +184,7 @@ known funded amount            = 114,000 KRW
 Ticket A: 50,000 * 6.92        = 346,000 KRW
 Ticket B: 64,080 * 3.55        = 227,484 KRW
 total staked                   = 114,080 KRW
-unreconciled funding difference=      80 KRW (UNKNOWN source)
+residual balance from prior cash-out =      80 KRW
 maximum combined payout        = 573,484 KRW
 maximum net profit vs stake    = 459,404 KRW
 ```
