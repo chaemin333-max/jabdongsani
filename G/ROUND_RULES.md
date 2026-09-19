@@ -12,7 +12,15 @@ evaluation_odds = displayed_decimal_odds - 0.10
 
 2. Multi-leg tickets use the bookmaker's actual offered combined decimal odds unless an explicit adjustment rule is documented for that round.
 
-3. Keep `displayed odds`, `evaluation odds`, `offered parlay odds`, and `effective fresh-cash odds` conceptually separate.
+3. Fixed project rule — 3-leg parlay odds bonus:
+
+```text
+3-leg parlay final odds = bookmaker combined odds with +3% total-odds bonus applied
+```
+
+For recordkeeping, the actually locked final combined odds are canonical. Do not reverse-engineer or overwrite a locked price from component odds unless explicitly requested.
+
+4. Keep `displayed odds`, `evaluation odds`, `offered parlay odds`, and `effective fresh-cash odds` conceptually separate.
 
 ## Round recording
 
